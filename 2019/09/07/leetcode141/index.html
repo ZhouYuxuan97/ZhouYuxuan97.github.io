@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Note,">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,20 +79,23 @@
 
 
 
-<meta name="description" content="1. HashMap123456789   Map&amp;lt;Integer ,Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();```  ## 2. Stack```Java    Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;();     stack.push(&apos;)&apos;);     stack.pop();     s">
-<meta name="keywords" content="Note">
+<meta name="description" content="Given a linked list, determine if it has a cycle in it. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail con">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaNote">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/04/JavaNote/index.html">
+<meta property="og:title" content="leetcode141">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1. HashMap123456789   Map&amp;lt;Integer ,Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();```  ## 2. Stack```Java    Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;();     stack.push(&apos;)&apos;);     stack.pop();     s">
+<meta property="og:description" content="Given a linked list, determine if it has a cycle in it. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail con">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/04/JavaNote/image2.png">
-<meta property="og:updated_time" content="2019-09-07T05:32:33.977Z">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/image.png">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/image2.png">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/image3.png">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/image4.png">
+<meta property="og:updated_time" content="2019-09-07T06:34:06.238Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaNote">
-<meta name="twitter:description" content="1. HashMap123456789   Map&amp;lt;Integer ,Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();```  ## 2. Stack```Java    Stack&amp;lt;Character&amp;gt; stack = new Stack&amp;lt;&amp;gt;();     stack.push(&apos;)&apos;);     stack.pop();     s">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/09/04/JavaNote/image2.png">
+<meta name="twitter:title" content="leetcode141">
+<meta name="twitter:description" content="Given a linked list, determine if it has a cycle in it. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail con">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/image.png">
 
 
 
@@ -122,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/04/JavaNote/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/">
 
 
 
 
 
-  <title>JavaNote | Hexo</title>
+  <title>leetcode141 | Hexo</title>
   
 
 
@@ -235,7 +238,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/04/JavaNote/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/07/leetcode141/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -252,7 +255,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaNote</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode141</h1>
         
 
         <div class="post-meta">
@@ -264,8 +267,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-04T00:03:15-04:00">
-                2019-09-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-07T02:12:07-04:00">
+                2019-09-07
               </time>
             
 
@@ -302,14 +305,24 @@
       
 
       
-        <h2 id="1-HashMap"><a href="#1-HashMap" class="headerlink" title="1. HashMap"></a>1. HashMap</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   Map&lt;Integer ,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">## 2. Stack</span><br><span class="line">```Java </span><br><span class="line">   Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();  </span><br><span class="line">   stack.push(<span class="string">')'</span>);  </span><br><span class="line">   stack.pop();  </span><br><span class="line">   stack.isEmpty();</span><br></pre></td></tr></table></figure>
+        <p>Given a linked list, determine if it has a cycle in it.</p>
+<p>To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list.</p>
+<p><img src="image.png" alt="image"></p>
+<h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><ol>
+<li>Hashmap</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        Map &lt;ListNode, Integer&gt; map = <span class="keyword">new</span> HashMap();</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(i&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(head==<span class="keyword">null</span>||head.next==<span class="keyword">null</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(map.containsKey(head))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(head, i);</span><br><span class="line">            head = head.next;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">false</span>; </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-String"><a href="#3-String" class="headerlink" title="3.String"></a>3.String</h2><ul>
-<li>取String里第n+1个字符, s.charAt(n)</li>
+<p><img src="image2.png" alt="image2"></p>
+<h2 id="Solution-from-others"><a href="#Solution-from-others" class="headerlink" title="Solution from others"></a>Solution from others</h2><h3 id="Approach-1-2-nodes-trace"><a href="#Approach-1-2-nodes-trace" class="headerlink" title="Approach 1 : 2 nodes trace"></a>Approach 1 : 2 nodes trace</h3><ul>
+<li>node1 is move 1 step faster than node2 each time, it will meet eventually</li>
 </ul>
-<h2 id="4-ListNode"><a href="#4-ListNode" class="headerlink" title="4. ListNode"></a>4. ListNode</h2><ul>
-<li>如果有设置head则从head开始操作，如果没有则l1.next指向链表第二个节点<br><img src="image2.png" alt="image2"></li>
-</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;       </span><br><span class="line">        ListNode s = head;</span><br><span class="line">        ListNode f = head;</span><br><span class="line">        <span class="keyword">while</span> (s != <span class="keyword">null</span> &amp;&amp; f != <span class="keyword">null</span> &amp;&amp; f.next != <span class="keyword">null</span>)  &#123;</span><br><span class="line">            s = s.next;</span><br><span class="line">            f = f.next.next;</span><br><span class="line">            <span class="keyword">if</span> (s == f) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;        </span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="image3.png" alt="image3"></p>
+<h3 id="Approach-1-HashSet"><a href="#Approach-1-HashSet" class="headerlink" title="Approach 1 : HashSet"></a>Approach 1 : HashSet</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    Set&lt;ListNode&gt; nodesSeen = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">    <span class="keyword">while</span> (head != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nodesSeen.contains(head)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            nodesSeen.add(head);</span><br><span class="line">        &#125;</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="image4.png" alt="image4"></p>
 
       
     </div>
@@ -327,7 +340,7 @@
       
         <div class="post-tags">
           
-            <a href="/ZhouYuxuan97.github.io/tags/Note/" rel="tag"># Note</a>
+            <a href="/ZhouYuxuan97.github.io/tags/leetcode/" rel="tag"># leetcode</a>
           
         </div>
       
@@ -340,8 +353,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/09/02/leetcode1/" rel="next" title="leetcode1 Two Sum">
-                <i class="fa fa-chevron-left"></i> leetcode1 Two Sum
+              <a href="/ZhouYuxuan97.github.io/2019/09/07/JavaNote/" rel="next" title="JavaNote">
+                <i class="fa fa-chevron-left"></i> JavaNote
               </a>
             
           </div>
@@ -349,10 +362,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/09/04/leetcode20/" rel="prev" title="leetcode20 Valid Parentheses">
-                leetcode20 Valid Parentheses <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -429,7 +438,7 @@
               
                 <a href="/ZhouYuxuan97.github.io/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -475,7 +484,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-HashMap"><span class="nav-number">1.</span> <span class="nav-text">1. HashMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-String"><span class="nav-number">2.</span> <span class="nav-text">3.String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-ListNode"><span class="nav-number">3.</span> <span class="nav-text">4. ListNode</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-from-others"><span class="nav-number">2.</span> <span class="nav-text">Solution from others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-2-nodes-trace"><span class="nav-number">2.1.</span> <span class="nav-text">Approach 1 : 2 nodes trace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-HashSet"><span class="nav-number">2.2.</span> <span class="nav-text">Approach 1 : HashSet</span></a></li></ol></li></ol></div>
             
 
           </div>
