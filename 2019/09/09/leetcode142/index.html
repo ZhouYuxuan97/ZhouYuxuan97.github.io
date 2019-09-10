@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,14 +79,22 @@
 
 
 
+<meta name="description" content="Given a linked list, return the node where the cycle begins. If there is no cycle, return null. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-in">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode142">
+<meta property="og:title" content="leetcode142 Linked List Cycle II">
 <meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/09/leetcode142/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Given a linked list, return the node where the cycle begins. If there is no cycle, return null. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-in">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-09T17:55:52.362Z">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/09/leetcode142/1.png">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/09/leetcode142/2.png">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/09/leetcode142/3.png">
+<meta property="og:updated_time" content="2019-09-09T18:15:03.265Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode142">
+<meta name="twitter:title" content="leetcode142 Linked List Cycle II">
+<meta name="twitter:description" content="Given a linked list, return the node where the cycle begins. If there is no cycle, return null. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-in">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/09/09/leetcode142/1.png">
 
 
 
@@ -122,7 +130,7 @@
 
 
 
-  <title>leetcode142 | Hexo</title>
+  <title>leetcode142 Linked List Cycle II | Hexo</title>
   
 
 
@@ -246,7 +254,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode142</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode142 Linked List Cycle II</h1>
         
 
         <div class="post-meta">
@@ -296,7 +304,23 @@
       
 
       
-        
+        <p>Given a linked list, return the node where the cycle begins. If there is no cycle, return null.</p>
+<p>To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list.</p>
+<p>Note: Do not modify the linked list.</p>
+<p><img src="1.png" alt="image"></p>
+<h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><ol>
+<li>Hashmap<ul>
+<li>takes long time to finish compare with using List<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        Map &lt;Integer, ListNode&gt; map = <span class="keyword">new</span> HashMap();</span><br><span class="line">       <span class="keyword">int</span> i=<span class="number">0</span>;        </span><br><span class="line">        <span class="keyword">while</span>(i&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(head==<span class="keyword">null</span>||head.next==<span class="keyword">null</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">if</span>(map.containsValue(head))&#123;</span><br><span class="line">                <span class="keyword">return</span> head;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(i, head);</span><br><span class="line">            head = head.next;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;       </span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">null</span>; </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="2.png" alt="image2"></p>
+<h2 id="Solution-from-others"><a href="#Solution-from-others" class="headerlink" title="Solution from others"></a>Solution from others</h2><h3 id="Approach-1-List"><a href="#Approach-1-List" class="headerlink" title="Approach 1 : List"></a>Approach 1 : List</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">detectCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode p = head;</span><br><span class="line">        List&lt;ListNode&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span>(p!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!list.contains(p))&#123;</span><br><span class="line">                list.add(p);</span><br><span class="line">                p = p.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> p;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>; </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="3.png" alt="image3"></p>
+<h3 id="Approach-2-2-nodes-trace"><a href="#Approach-2-2-nodes-trace" class="headerlink" title="Approach 2 : 2 nodes trace"></a>Approach 2 : 2 nodes trace</h3><pre><code>* Same as 2 nodes trace in leetcode141</code></pre>
       
     </div>
     
@@ -310,6 +334,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/ZhouYuxuan97.github.io/tags/leetcode/" rel="tag"># leetcode</a>
+          
+        </div>
       
 
       
@@ -329,6 +359,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/ZhouYuxuan97.github.io/2019/09/10/leetcode146/" rel="prev" title="leetcode146 LRU Cache">
+                leetcode146 LRU Cache <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -380,8 +414,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -396,7 +439,7 @@
               
                 <a href="/ZhouYuxuan97.github.io/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -432,6 +475,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-from-others"><span class="nav-number">2.</span> <span class="nav-text">Solution from others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-List"><span class="nav-number">2.1.</span> <span class="nav-text">Approach 1 : List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-2-2-nodes-trace"><span class="nav-number">2.2.</span> <span class="nav-text">Approach 2 : 2 nodes trace</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
