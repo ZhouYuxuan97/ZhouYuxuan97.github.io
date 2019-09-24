@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="开篇题记&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;周宇轩(Zhou,Yuxuan)于美国纽约州雪城，EST 9/2/2019 创建本博客。 &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;使用Github Page + Hoex，在Git上绑定 www.zyx97.com 域名，本地使用Hexo Admin编辑工具(可以编辑，但是无法发布，遂使用命令行发布)。">
+<meta name="description" content="Given a linked list, swap every two adjacent nodes and return its head. You may not modify the values in the list’s nodes, only nodes itself may be changed. Example: Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you sho">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My First Blog">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/02/My-Blog/index.html">
+<meta property="og:title" content="leetcode24 Swap Nodes in Pairs">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/23/leetcode160/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="开篇题记&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;周宇轩(Zhou,Yuxuan)于美国纽约州雪城，EST 9/2/2019 创建本博客。 &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;使用Github Page + Hoex，在Git上绑定 www.zyx97.com 域名，本地使用Hexo Admin编辑工具(可以编辑，但是无法发布，遂使用命令行发布)。">
+<meta property="og:description" content="Given a linked list, swap every two adjacent nodes and return its head. You may not modify the values in the list’s nodes, only nodes itself may be changed. Example: Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you sho">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-03T02:26:39.481Z">
+<meta property="og:updated_time" content="2019-09-24T03:40:33.274Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My First Blog">
-<meta name="twitter:description" content="开篇题记&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;周宇轩(Zhou,Yuxuan)于美国纽约州雪城，EST 9/2/2019 创建本博客。 &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;使用Github Page + Hoex，在Git上绑定 www.zyx97.com 域名，本地使用Hexo Admin编辑工具(可以编辑，但是无法发布，遂使用命令行发布)。">
+<meta name="twitter:title" content="leetcode24 Swap Nodes in Pairs">
+<meta name="twitter:description" content="Given a linked list, swap every two adjacent nodes and return its head. You may not modify the values in the list’s nodes, only nodes itself may be changed. Example: Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you sho">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/02/My-Blog/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/23/leetcode160/">
 
 
 
 
 
-  <title>My First Blog | Hexo</title>
+  <title>leetcode24 Swap Nodes in Pairs | Hexo</title>
   
 
 
@@ -232,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/02/My-Blog/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/23/leetcode160/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -249,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">My First Blog</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode24 Swap Nodes in Pairs</h1>
         
 
         <div class="post-meta">
@@ -261,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-02T16:08:00-04:00">
-                2019-09-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-23T23:33:08-04:00">
+                2019-09-23
               </time>
             
 
@@ -299,26 +300,14 @@
       
 
       
-        <h1 id="开篇题记"><a href="#开篇题记" class="headerlink" title="开篇题记"></a>开篇题记</h1><p>&ensp;&ensp;&ensp;&ensp;周宇轩(Zhou,Yuxuan)于美国纽约州雪城，EST 9/2/2019 创建本博客。</p>
-<p>&ensp;&ensp;&ensp;&ensp;使用Github Page + Hoex，在Git上绑定 <a href="http://www.zyx97.com" target="_blank" rel="noopener">www.zyx97.com</a> 域名<del>，本地使用Hexo Admin编辑工具</del>(可以编辑，但是无法发布，遂使用命令行发布)。</p>
-<a id="more"></a>
+        <p>Given a linked list, swap every two adjacent nodes and return its head.</p>
+<p>You may not modify the values in the list’s nodes, only nodes itself may be changed.</p>
+<p>Example:</p>
+<pre><code>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><p>normal method</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode p = head;</span><br><span class="line">        ListNode temp;</span><br><span class="line">        <span class="keyword">while</span>(p.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(p.next.next==<span class="keyword">null</span>)</span><br><span class="line">                <span class="keyword">return</span> head;</span><br><span class="line">            <span class="keyword">if</span>(p==head)&#123;</span><br><span class="line">                head=p.next;</span><br><span class="line">                p.next=head.next;</span><br><span class="line">                head.next=p;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                temp=p.next;</span><br><span class="line">                p.next=temp.next;</span><br><span class="line">                <span class="keyword">if</span>(temp.next.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                    temp.next=temp.next.next;&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    temp.next=<span class="keyword">null</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                p.next.next=temp;</span><br><span class="line">                p=temp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(p==head&amp;&amp;p.next.next==<span class="keyword">null</span>)&#123;</span><br><span class="line">            head=p.next;</span><br><span class="line">            p.next=head.next;</span><br><span class="line">            head.next=p;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>参考链接：</strong></p>
-<ul>
-<li><p><a href="https://blog.csdn.net/qq_40871466/article/details/86763540" target="_blank" rel="noopener">Github和本地Hexo配置2</a></p>
-</li>
-<li><p><a href="https://blog.csdn.net/BLSPers/article/details/82986039" target="_blank" rel="noopener">Github和本地Hexo配置2</a></p>
-</li>
-</ul>
-<ul>
-<li><a href="https://www.jianshu.com/p/68e727dda16d" target="_blank" rel="noopener">本地配置Hexo Admin</a></li>
-</ul>
-<ul>
-<li><p><a href="https://segmentfault.com/a/1190000018488921" target="_blank" rel="noopener">发布博客</a></p>
-</li>
-<li><p><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">Markdown语法</a></p>
-</li>
-</ul>
+<h2 id="Solution-from-others"><a href="#Solution-from-others" class="headerlink" title="Solution from others"></a>Solution from others</h2><h3 id="Approach-1-recursion"><a href="#Approach-1-recursion" class="headerlink" title="Approach 1 : recursion"></a>Approach 1 : recursion</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        ListNode first = head;</span><br><span class="line">        ListNode second = head.next;</span><br><span class="line">        first.next = swapPairs(first.next.next);</span><br><span class="line">        head = second;</span><br><span class="line">        head.next = first;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -334,6 +323,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/ZhouYuxuan97.github.io/tags/leetcode/" rel="tag"># leetcode</a>
+          
+        </div>
+      
 
       
       
@@ -343,15 +338,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/ZhouYuxuan97.github.io/2019/09/10/leetcode146/" rel="next" title="leetcode146 LRU Cache">
+                <i class="fa fa-chevron-left"></i> leetcode146 LRU Cache
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/09/02/leetcode1/" rel="prev" title="leetcode1 Two Sum">
-                leetcode1 Two Sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -474,7 +469,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开篇题记"><span class="nav-number">1.</span> <span class="nav-text">开篇题记</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-from-others"><span class="nav-number">2.</span> <span class="nav-text">Solution from others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-recursion"><span class="nav-number">2.1.</span> <span class="nav-text">Approach 1 : recursion</span></a></li></ol></li></ol></div>
             
 
           </div>

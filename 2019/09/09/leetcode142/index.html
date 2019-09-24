@@ -89,8 +89,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/09/leetcode142/1.png">
 <meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/09/leetcode142/2.png">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/09/leetcode142/3.png">
-<meta property="og:updated_time" content="2019-09-09T18:15:03.265Z">
+<meta property="og:updated_time" content="2019-09-19T02:30:30.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="leetcode142 Linked List Cycle II">
 <meta name="twitter:description" content="Given a linked list, return the node where the cycle begins. If there is no cycle, return null. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-in">
@@ -317,10 +316,7 @@
 </li>
 </ol>
 <p><img src="2.png" alt="image2"></p>
-<h2 id="Solution-from-others"><a href="#Solution-from-others" class="headerlink" title="Solution from others"></a>Solution from others</h2><h3 id="Approach-1-List"><a href="#Approach-1-List" class="headerlink" title="Approach 1 : List"></a>Approach 1 : List</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">detectCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode p = head;</span><br><span class="line">        List&lt;ListNode&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span>(p!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!list.contains(p))&#123;</span><br><span class="line">                list.add(p);</span><br><span class="line">                p = p.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> p;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>; </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="3.png" alt="image3"></p>
-<h3 id="Approach-2-2-nodes-trace"><a href="#Approach-2-2-nodes-trace" class="headerlink" title="Approach 2 : 2 nodes trace"></a>Approach 2 : 2 nodes trace</h3><pre><code>* Same as 2 nodes trace in leetcode141</code></pre>
+<h2 id="Solution-from-others"><a href="#Solution-from-others" class="headerlink" title="Solution from others"></a>Solution from others</h2><h3 id="Approach-1-List"><a href="#Approach-1-List" class="headerlink" title="Approach 1 : List"></a>Approach 1 : List</h3>
       
     </div>
     
@@ -439,7 +435,7 @@
               
                 <a href="/ZhouYuxuan97.github.io/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -485,7 +481,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-from-others"><span class="nav-number">2.</span> <span class="nav-text">Solution from others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-List"><span class="nav-number">2.1.</span> <span class="nav-text">Approach 1 : List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-2-2-nodes-trace"><span class="nav-number">2.2.</span> <span class="nav-text">Approach 2 : 2 nodes trace</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-from-others"><span class="nav-number">2.</span> <span class="nav-text">Solution from others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-List"><span class="nav-number">2.1.</span> <span class="nav-text">Approach 1 : List</span></a></li></ol></li></ol></div>
             
 
           </div>
