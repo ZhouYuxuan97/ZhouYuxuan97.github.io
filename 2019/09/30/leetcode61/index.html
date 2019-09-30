@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,13 +79,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/page/2/index.html">
+<meta name="description" content="Given a linked list, rotate the list to the right by k places, where k is non-negative. Example 1: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, k = 2Output: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULLExplanation">
+<meta name="keywords" content="leetcode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode61 Rotate List">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/30/leetcode61/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Given a linked list, rotate the list to the right by k places, where k is non-negative. Example 1: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, k = 2Output: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULLExplanation">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/30/leetcode61/1.png">
+<meta property="og:updated_time" content="2019-09-30T18:20:12.249Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="leetcode61 Rotate List">
+<meta name="twitter:description" content="Given a linked list, rotate the list to the right by k places, where k is non-negative. Example 1: Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, k = 2Output: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULLExplanation">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/09/30/leetcode61/1.png">
 
 
 
@@ -115,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/page/2/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/30/leetcode61/">
 
 
 
 
 
-  <title>Hexo</title>
+  <title>leetcode61 Rotate List | Hexo</title>
   
 
 
@@ -140,8 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +220,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -229,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/05/leetcode21/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/30/leetcode61/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -246,9 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/ZhouYuxuan97.github.io/2019/09/05/leetcode21/" itemprop="url">leetcode21 Merge Two Sorted Lists</a></h1>
+          <h1 class="post-title" itemprop="name headline">leetcode61 Rotate List</h1>
         
 
         <div class="post-meta">
@@ -260,8 +264,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T01:00:19-04:00">
-                2019-09-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-30T14:17:52-04:00">
+                2019-09-30
               </time>
             
 
@@ -298,19 +302,14 @@
       
 
       
-        
-          
-          Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
-Example:
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/ZhouYuxuan97.github.io/2019/09/05/leetcode21/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>Given a linked list, rotate the list to the right by k places, where k is non-negative.</p>
+<p>Example 1:</p>
+<p>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, k = 2<br>Output: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL<br>Explanation:<br>    rotate 1 steps to the right: 5-&gt;1-&gt;2-&gt;3-&gt;4-&gt;NULL<br>    rotate 2 steps to the right: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL<br>    Example 2:</p>
+<p>Input: 0-&gt;1-&gt;2-&gt;NULL, k = 4<br>Output: 2-&gt;0-&gt;1-&gt;NULL<br>Explanation:<br>    rotate 1 steps to the right: 2-&gt;0-&gt;1-&gt;NULL<br>    rotate 2 steps to the right: 1-&gt;2-&gt;0-&gt;NULL<br>    rotate 3 steps to the right: 0-&gt;1-&gt;2-&gt;NULL<br>    rotate 4 steps to the right: 2-&gt;0-&gt;1-&gt;NULL</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">rotateRight</span><span class="params">(ListNode head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        ListNode dummy=<span class="keyword">new</span> ListNode(-<span class="number">1</span>);</span><br><span class="line">        dummy.next=head;</span><br><span class="line">        ListNode tail=dummy,p1=dummy;        </span><br><span class="line">        <span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(k==<span class="number">0</span>||tail.next==<span class="keyword">null</span>||tail==<span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">        <span class="keyword">while</span>(tail.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            tail=tail.next;</span><br><span class="line">            c++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(c-k%c);i++)&#123;</span><br><span class="line">            p1=p1.next;</span><br><span class="line">        &#125;    </span><br><span class="line">        tail.next=head;</span><br><span class="line">        head=p1.next;</span><br><span class="line">        p1.next=<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="1.png" alt="image1"></p>
+
       
     </div>
     
@@ -325,269 +324,36 @@ Example:
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/04/leetcode20/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yuxuan Zhou">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/ZhouYuxuan97.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/ZhouYuxuan97.github.io/2019/09/04/leetcode20/" itemprop="url">leetcode20 Valid Parentheses</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-04T02:27:41-04:00">
-                2019-09-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/ZhouYuxuan97.github.io/tags/leetcode/" rel="tag"># leetcode</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          Given a string containing just the characters ‘(‘, ‘)’, ‘{‘, ‘}’, ‘[‘ and ‘]’, determine if the input string is valid.
-An input string is valid if:
-Op
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/ZhouYuxuan97.github.io/2019/09/04/leetcode20/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/ZhouYuxuan97.github.io/2019/09/30/leetcode92/" rel="next" title="leetcode92 Reverse Linked List II">
+                <i class="fa fa-chevron-left"></i> leetcode92 Reverse Linked List II
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/02/leetcode1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yuxuan Zhou">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/ZhouYuxuan97.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/ZhouYuxuan97.github.io/2019/09/02/leetcode1/" itemprop="url">leetcode1 Two Sum</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-02T22:36:11-04:00">
-                2019-09-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-You may assume that each input would have ex
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/ZhouYuxuan97.github.io/2019/09/02/leetcode1/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -597,139 +363,11 @@ You may assume that each input would have ex
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/02/My-Blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yuxuan Zhou">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/ZhouYuxuan97.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/ZhouYuxuan97.github.io/2019/09/02/My-Blog/" itemprop="url">My First Blog</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-02T16:08:00-04:00">
-                2019-09-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="开篇题记"><a href="#开篇题记" class="headerlink" title="开篇题记"></a>开篇题记</h1><p>&ensp;&ensp;&ensp;&ensp;周宇轩(Zhou,Yuxuan)于美国纽约州雪城，EST 9/2/2019 创建本博客。</p>
-<p>&ensp;&ensp;&ensp;&ensp;使用Github Page + Hoex，在Git上绑定 <a href="http://www.zyx97.com" target="_blank" rel="noopener">www.zyx97.com</a> 域名<del>，本地使用Hexo Admin编辑工具</del>(可以编辑，但是无法发布，遂使用命令行发布)。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/ZhouYuxuan97.github.io/2019/09/02/My-Blog/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/ZhouYuxuan97.github.io/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/ZhouYuxuan97.github.io/">1</a><span class="page-number current">2</span>
-  </nav>
-
 
 
           </div>
@@ -737,6 +375,10 @@ You may assume that each input would have ex
 
 
           
+
+  
+
+
 
         </div>
         
@@ -949,6 +591,10 @@ You may assume that each input would have ex
 
 
   
+  <script type="text/javascript" src="/ZhouYuxuan97.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/ZhouYuxuan97.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
