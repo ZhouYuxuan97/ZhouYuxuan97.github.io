@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Note,">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,20 +79,21 @@
 
 
 
-<meta name="description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key, Objec">
-<meta name="keywords" content="Note">
+<meta name="description" content="Given a sorted linked list, delete all duplicates such that each element appear only once. Example 1: Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2Example 2: Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;g">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaNote">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/index.html">
+<meta property="og:title" content="leetcode83 Remove Duplicates from Sorted List">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/04/leetcode83/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key, Objec">
+<meta property="og:description" content="Given a sorted linked list, delete all duplicates such that each element appear only once. Example 1: Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2Example 2: Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;g">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/image2.png">
-<meta property="og:updated_time" content="2019-09-24T04:15:58.236Z">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/04/leetcode83/1.png">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/04/leetcode83/2.png">
+<meta property="og:updated_time" content="2019-10-04T06:11:22.314Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaNote">
-<meta name="twitter:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key, Objec">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/image2.png">
+<meta name="twitter:title" content="leetcode83 Remove Duplicates from Sorted List">
+<meta name="twitter:description" content="Given a sorted linked list, delete all duplicates such that each element appear only once. Example 1: Input: 1-&amp;gt;1-&amp;gt;2 Output: 1-&amp;gt;2Example 2: Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3 Output: 1-&amp;gt;2-&amp;g">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/04/leetcode83/1.png">
 
 
 
@@ -122,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/10/04/leetcode83/">
 
 
 
 
 
-  <title>JavaNote | Hexo</title>
+  <title>leetcode83 Remove Duplicates from Sorted List | Hexo</title>
   
 
 
@@ -235,7 +236,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/07/JavaNote/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/10/04/leetcode83/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -252,7 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaNote</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode83 Remove Duplicates from Sorted List</h1>
         
 
         <div class="post-meta">
@@ -264,8 +265,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-07T01:33:33-04:00">
-                2019-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-04T01:48:04-04:00">
+                2019-10-04
               </time>
             
 
@@ -302,25 +303,17 @@
       
 
       
-        <h2 id="HashMap-HashSet"><a href="#HashMap-HashSet" class="headerlink" title="HashMap HashSet"></a>HashMap HashSet</h2><ul>
-<li>用哈希往往耗时更长</li>
-<li>Set就明显小于HashMap in runtime and space<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//Object1是key, Object2是value</span></span><br><span class="line">   Map&lt;Object1 ,Object2&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">   <span class="function">Object <span class="title">put</span><span class="params">(Object key, Object value)</span></span>;</span><br><span class="line">   <span class="function">Object <span class="title">get</span><span class="params">(Object key)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">containsKey</span><span class="params">(Object key)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">containsValue</span><span class="params">(Object value)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">```Java</span><br><span class="line">   Set&lt;ListNode&gt; nodesSeen = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">   nodesSeen.contains(head)</span><br><span class="line">   nodesSeen.add(head);</span><br></pre></td></tr></table></figure>
+        <p>Given a sorted linked list, delete all duplicates such that each element appear only once.</p>
+<p>Example 1:</p>
+<pre><code>Input: 1-&gt;1-&gt;2
+Output: 1-&gt;2</code></pre><p>Example 2:</p>
+<pre><code>Input: 1-&gt;1-&gt;2-&gt;3-&gt;3
+Output: 1-&gt;2-&gt;3</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">         ListNode n=<span class="keyword">new</span> ListNode(-<span class="number">1</span>);    </span><br><span class="line">        n.next=head;</span><br><span class="line">        ListNode n1=n,n2;</span><br><span class="line">        <span class="keyword">while</span>(n1.next!=<span class="keyword">null</span>&amp;&amp;n1.next.next!=<span class="keyword">null</span>)&#123;           </span><br><span class="line">            n2=n1.next;</span><br><span class="line">            <span class="keyword">while</span>(n2.next!=<span class="keyword">null</span>&amp;&amp;n2.val==n2.next.val)&#123;</span><br><span class="line">                n2=n2.next;</span><br><span class="line">                n1.next=n2;</span><br><span class="line">            &#125;</span><br><span class="line">            n1=n2;</span><br><span class="line">        &#125;</span><br><span class="line">        head=n.next;</span><br><span class="line">        <span class="keyword">return</span> head;       </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();  </span><br><span class="line">stack.push(<span class="string">')'</span>);  </span><br><span class="line">stack.pop();  </span><br><span class="line">stack.isEmpty();</span><br></pre></td></tr></table></figure>
+<p><img src="1.png" alt="image1"></p>
+<h2 id="Solution-from-others"><a href="#Solution-from-others" class="headerlink" title="Solution from others"></a>Solution from others</h2><h3 id="Approach-1-1"><a href="#Approach-1-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode current = head;</span><br><span class="line">    <span class="keyword">while</span> (current != <span class="keyword">null</span> &amp;&amp; current.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (current.next.val == current.val) &#123;</span><br><span class="line">            current.next = current.next.next;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            current = current.next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><ul>
-<li>取String里第n+1个字符, s.charAt(n)</li>
-</ul>
-<h2 id="ListNode"><a href="#ListNode" class="headerlink" title="ListNode"></a>ListNode</h2><ul>
-<li>如果有设置head则从head开始操作，如果没有则l1.next指向链表第二个节点<br><img src="image2.png" alt="image2"></li>
-</ul>
-<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><ul>
-<li>不需要键值对时用list函数进行查找比hashmap更快<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Object object&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"><span class="keyword">boolean</span> list.contains(Object value)</span><br><span class="line">Object list.add(p);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
+<p><img src="2.png" alt="image2"></p>
 
       
     </div>
@@ -338,7 +331,7 @@
       
         <div class="post-tags">
           
-            <a href="/ZhouYuxuan97.github.io/tags/Note/" rel="tag"># Note</a>
+            <a href="/ZhouYuxuan97.github.io/tags/leetcode/" rel="tag"># leetcode</a>
           
         </div>
       
@@ -351,8 +344,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/09/05/leetcode21/" rel="next" title="leetcode21 Merge Two Sorted Lists">
-                <i class="fa fa-chevron-left"></i> leetcode21 Merge Two Sorted Lists
+              <a href="/ZhouYuxuan97.github.io/2019/09/30/leetcode61/" rel="next" title="leetcode61 Rotate List">
+                <i class="fa fa-chevron-left"></i> leetcode61 Rotate List
               </a>
             
           </div>
@@ -361,8 +354,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/09/07/leetcode141/" rel="prev" title="leetcode141 Linked List Cycle">
-                leetcode141 Linked List Cycle <i class="fa fa-chevron-right"></i>
+              <a href="/ZhouYuxuan97.github.io/2019/10/04/leetcode82/" rel="prev" title="leetcode82 Remove Duplicates from Sorted List II">
+                leetcode82 Remove Duplicates from Sorted List II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -486,7 +479,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap-HashSet"><span class="nav-number">1.</span> <span class="nav-text">HashMap HashSet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-number">2.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">3.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ListNode"><span class="nav-number">4.</span> <span class="nav-text">ListNode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-number">5.</span> <span class="nav-text">List</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-from-others"><span class="nav-number">2.</span> <span class="nav-text">Solution from others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-1"><span class="nav-number">2.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
             
 
           </div>
