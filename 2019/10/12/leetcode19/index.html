@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="leetcode,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,18 +79,19 @@
 
 
 
-<meta name="description" content="Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists. Example: Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt">
-<meta name="keywords" content="leetcode">
+<meta name="description" content="Given a linked list, remove the n-th node from the end of list and return its head. Example: iven linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.  After removing the second node from the end, the l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode21 Merge Two Sorted Lists">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/05/leetcode21/index.html">
+<meta property="og:title" content="leetcode19">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/12/leetcode19/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists. Example: Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt">
+<meta property="og:description" content="Given a linked list, remove the n-th node from the end of list and return its head. Example: iven linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.  After removing the second node from the end, the l">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-07T05:25:52.020Z">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/12/leetcode19/1.png">
+<meta property="og:updated_time" content="2019-10-12T05:47:24.136Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode21 Merge Two Sorted Lists">
-<meta name="twitter:description" content="Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists. Example: Input: 1-&amp;gt;2-&amp;gt;4, 1-&amp;gt;3-&amp;gt;4 Output: 1-&amp;gt">
+<meta name="twitter:title" content="leetcode19">
+<meta name="twitter:description" content="Given a linked list, remove the n-th node from the end of list and return its head. Example: iven linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.  After removing the second node from the end, the l">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/12/leetcode19/1.png">
 
 
 
@@ -120,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/05/leetcode21/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/10/12/leetcode19/">
 
 
 
 
 
-  <title>leetcode21 Merge Two Sorted Lists | Hexo</title>
+  <title>leetcode19 | Hexo</title>
   
 
 
@@ -233,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/05/leetcode21/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/10/12/leetcode19/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -250,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode21 Merge Two Sorted Lists</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode19</h1>
         
 
         <div class="post-meta">
@@ -262,8 +263,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T01:00:19-04:00">
-                2019-09-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-12T01:45:49-04:00">
+                2019-10-12
               </time>
             
 
@@ -300,11 +301,15 @@
       
 
       
-        <p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>
+        <p>Given a linked list, remove the n-th node from the end of list and return its head.</p>
 <p>Example:</p>
-<pre><code>Input: 1-&gt;2-&gt;4, 1-&gt;3-&gt;4
-Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</code></pre><h2 id="Solution-from-others"><a href="#Solution-from-others" class="headerlink" title="Solution from others"></a>Solution from others</h2><h3 id="Approach-1-Divide-and-conquer"><a href="#Approach-1-Divide-and-conquer" class="headerlink" title="Approach 1 : Divide and conquer"></a>Approach 1 : Divide and conquer</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">mergeTwoLists</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">           <span class="keyword">if</span> (l1 == <span class="keyword">null</span> &amp;&amp; l2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (l1 == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> l2;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (l2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> l1;</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">    <span class="keyword">if</span> (l1.val &gt; l2.val)</span><br><span class="line">    &#123;</span><br><span class="line">        l2.next = mergeTwoLists(l1, l2.next);</span><br><span class="line">        <span class="keyword">return</span> l2;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        l1.next = mergeTwoLists(l1.next, l2);</span><br><span class="line">        <span class="keyword">return</span> l1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>iven linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
 
+After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.</code></pre><p>Note:</p>
+<p>Given n will always be valid.</p>
+<h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">removeNthFromEnd</span><span class="params">(ListNode head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">        ListNode n1=<span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        n1.next=head;</span><br><span class="line">        ListNode first = head;</span><br><span class="line">        <span class="keyword">while</span>(first!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            c++;</span><br><span class="line">            first=first.next;</span><br><span class="line">        &#125;</span><br><span class="line">      <span class="comment">//  System.out.println(c);</span></span><br><span class="line">        <span class="keyword">int</span> c2=<span class="number">0</span>;</span><br><span class="line">        first=n1;</span><br><span class="line">        <span class="keyword">while</span>(c2!=(c-n))&#123;first=first.next;c2++;&#125;</span><br><span class="line">            </span><br><span class="line">        <span class="keyword">if</span>(c==<span class="number">1</span>||c==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> head=<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(n==<span class="number">1</span>)&#123;</span><br><span class="line">            first.next=<span class="keyword">null</span>;</span><br><span class="line">            </span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(c==n)&#123;</span><br><span class="line">            <span class="keyword">return</span> head=head.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(n&gt;<span class="number">1</span>)&#123;</span><br><span class="line">            first.next=first.next.next;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="1.png" alt="image1"></p>
 
       
     </div>
@@ -320,12 +325,6 @@ Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</code></pre><h2 id="Solution-from-others
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/ZhouYuxuan97.github.io/tags/leetcode/" rel="tag"># leetcode</a>
-          
-        </div>
-      
 
       
       
@@ -335,8 +334,8 @@ Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</code></pre><h2 id="Solution-from-others
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/09/04/leetcode20/" rel="next" title="leetcode20 Valid Parentheses">
-                <i class="fa fa-chevron-left"></i> leetcode20 Valid Parentheses
+              <a href="/ZhouYuxuan97.github.io/2019/10/04/leetcode82/" rel="next" title="leetcode82 Remove Duplicates from Sorted List II">
+                <i class="fa fa-chevron-left"></i> leetcode82 Remove Duplicates from Sorted List II
               </a>
             
           </div>
@@ -344,10 +343,6 @@ Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</code></pre><h2 id="Solution-from-others
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/09/07/JavaNote/" rel="prev" title="JavaNote">
-                JavaNote <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -470,7 +465,7 @@ Output: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</code></pre><h2 id="Solution-from-others
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-from-others"><span class="nav-number">1.</span> <span class="nav-text">Solution from others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-Divide-and-conquer"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1 : Divide and conquer</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
             
 
           </div>
