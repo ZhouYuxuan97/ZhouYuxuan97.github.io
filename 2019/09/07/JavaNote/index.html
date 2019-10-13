@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key, Objec">
+<meta name="description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213141516   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key,">
 <meta name="keywords" content="Note">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaNote">
 <meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key, Objec">
+<meta property="og:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213141516   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key,">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/image2.png">
-<meta property="og:updated_time" content="2019-09-24T04:15:58.236Z">
+<meta property="og:updated_time" content="2019-10-13T21:40:49.645Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaNote">
-<meta name="twitter:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key, Objec">
+<meta name="twitter:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213141516   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key,">
 <meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/image2.png">
 
 
@@ -304,7 +304,7 @@
       
         <h2 id="HashMap-HashSet"><a href="#HashMap-HashSet" class="headerlink" title="HashMap HashSet"></a>HashMap HashSet</h2><ul>
 <li>用哈希往往耗时更长</li>
-<li>Set就明显小于HashMap in runtime and space<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//Object1是key, Object2是value</span></span><br><span class="line">   Map&lt;Object1 ,Object2&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">   <span class="function">Object <span class="title">put</span><span class="params">(Object key, Object value)</span></span>;</span><br><span class="line">   <span class="function">Object <span class="title">get</span><span class="params">(Object key)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">containsKey</span><span class="params">(Object key)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">containsValue</span><span class="params">(Object value)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">```Java</span><br><span class="line">   Set&lt;ListNode&gt; nodesSeen = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">   nodesSeen.contains(head)</span><br><span class="line">   nodesSeen.add(head);</span><br></pre></td></tr></table></figure>
+<li>Set就明显小于HashMap in runtime and space<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//Object1是key, Object2是value</span></span><br><span class="line">   Map&lt;Object1 ,Object2&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">   <span class="function">Object <span class="title">put</span><span class="params">(Object key, Object value)</span></span>;</span><br><span class="line">   <span class="function">Object <span class="title">get</span><span class="params">(Object key)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">containsKey</span><span class="params">(Object key)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">containsValue</span><span class="params">(Object value)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>;</span><br><span class="line">   <span class="keyword">for</span>(Node node:map.keySet())&#123;</span><br><span class="line">            map.get(node).random=map.get(node.random);</span><br><span class="line">        &#125;<span class="comment">//ketSet store a set of key in map, it can be itrated by iterator</span></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">```Java</span><br><span class="line">   Set&lt;ListNode&gt; nodesSeen = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">   nodesSeen.contains(head)</span><br><span class="line">   nodesSeen.add(head);</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -440,7 +440,7 @@
               
                 <a href="/ZhouYuxuan97.github.io/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

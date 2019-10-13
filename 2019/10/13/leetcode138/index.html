@@ -79,18 +79,21 @@
 
 
 
-<meta name="description" content="Given a linked list, swap every two adjacent nodes and return its head. You may not modify the values in the list’s nodes, only nodes itself may be changed. Example: Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you sho">
+<meta name="description" content="A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null. Return a deep copy of the list.Example 1: 12345678910111213141516171">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode24 Swap Nodes in Pairs">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/23/leetcode24/index.html">
+<meta property="og:title" content="leetcode138 Copy List with Random Pointer">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/13/leetcode138/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Given a linked list, swap every two adjacent nodes and return its head. You may not modify the values in the list’s nodes, only nodes itself may be changed. Example: Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you sho">
+<meta property="og:description" content="A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null. Return a deep copy of the list.Example 1: 12345678910111213141516171">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-24T03:41:51.268Z">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/13/leetcode138/2.png">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/13/leetcode138/1.png">
+<meta property="og:updated_time" content="2019-10-13T21:40:49.645Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode24 Swap Nodes in Pairs">
-<meta name="twitter:description" content="Given a linked list, swap every two adjacent nodes and return its head. You may not modify the values in the list’s nodes, only nodes itself may be changed. Example: Given 1-&amp;gt;2-&amp;gt;3-&amp;gt;4, you sho">
+<meta name="twitter:title" content="leetcode138 Copy List with Random Pointer">
+<meta name="twitter:description" content="A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null. Return a deep copy of the list.Example 1: 12345678910111213141516171">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/13/leetcode138/2.png">
 
 
 
@@ -120,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/23/leetcode24/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/10/13/leetcode138/">
 
 
 
 
 
-  <title>leetcode24 Swap Nodes in Pairs | Hexo</title>
+  <title>leetcode138 Copy List with Random Pointer | Hexo</title>
   
 
 
@@ -233,7 +236,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/23/leetcode24/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/10/13/leetcode138/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -250,7 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode24 Swap Nodes in Pairs</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode138 Copy List with Random Pointer</h1>
         
 
         <div class="post-meta">
@@ -262,8 +265,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-23T23:33:08-04:00">
-                2019-09-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-13T17:36:16-04:00">
+                2019-10-13
               </time>
             
 
@@ -300,14 +303,11 @@
       
 
       
-        <p>Given a linked list, swap every two adjacent nodes and return its head.</p>
-<p>You may not modify the values in the list’s nodes, only nodes itself may be changed.</p>
-<p>Example:</p>
-<pre><code>Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><p>normal method</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode p = head;</span><br><span class="line">        ListNode temp;</span><br><span class="line">        <span class="keyword">while</span>(p.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(p.next.next==<span class="keyword">null</span>)</span><br><span class="line">                <span class="keyword">return</span> head;</span><br><span class="line">            <span class="keyword">if</span>(p==head)&#123;</span><br><span class="line">                head=p.next;</span><br><span class="line">                p.next=head.next;</span><br><span class="line">                head.next=p;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                temp=p.next;</span><br><span class="line">                p.next=temp.next;</span><br><span class="line">                <span class="keyword">if</span>(temp.next.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                    temp.next=temp.next.next;&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    temp.next=<span class="keyword">null</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                p.next.next=temp;</span><br><span class="line">                p=temp;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(p==head&amp;&amp;p.next.next==<span class="keyword">null</span>)&#123;</span><br><span class="line">            head=p.next;</span><br><span class="line">            p.next=head.next;</span><br><span class="line">            head.next=p;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.</p>
+<p>Return a deep copy of the list.<br>Example 1:<br><img src="2.png" alt="image2"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">copyRandomList</span><span class="params">(Node head)</span> </span>&#123;</span><br><span class="line">        Map&lt;Node, Node&gt; map= <span class="keyword">new</span> HashMap();</span><br><span class="line">        Node curr =head;</span><br><span class="line">        <span class="keyword">if</span>(curr==<span class="keyword">null</span>)&#123;            </span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;&#125;</span><br><span class="line">        Node ntemp=curr;</span><br><span class="line">        Node nhead=<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">while</span>(curr!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            </span><br><span class="line">            Node ncopy=<span class="keyword">new</span> Node(curr.val,<span class="keyword">null</span>,<span class="keyword">null</span>);</span><br><span class="line">           </span><br><span class="line">            <span class="keyword">if</span>(curr!=head)&#123;</span><br><span class="line">                ntemp.next=ncopy;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(curr==head)</span><br><span class="line">                nhead=ncopy;</span><br><span class="line">            ntemp=ncopy;</span><br><span class="line">            map.put(curr,ncopy);</span><br><span class="line">            curr=curr.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(Node node:map.keySet())&#123;</span><br><span class="line">            map.get(node).random=map.get(node.random);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nhead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Solution-from-others"><a href="#Solution-from-others" class="headerlink" title="Solution from others"></a>Solution from others</h2><h3 id="Approach-1-recursion"><a href="#Approach-1-recursion" class="headerlink" title="Approach 1 : recursion"></a>Approach 1 : recursion</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        ListNode first = head;</span><br><span class="line">        ListNode second = head.next;</span><br><span class="line">        first.next = swapPairs(first.next.next);</span><br><span class="line">        head = second;</span><br><span class="line">        head.next = first;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p><img src="1.png" alt="image1"></p>
 
       
     </div>
@@ -338,8 +338,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/09/10/leetcode146/" rel="next" title="leetcode146 LRU Cache">
-                <i class="fa fa-chevron-left"></i> leetcode146 LRU Cache
+              <a href="/ZhouYuxuan97.github.io/2019/10/13/leetcode234/" rel="next" title="leetcode234">
+                <i class="fa fa-chevron-left"></i> leetcode234
               </a>
             
           </div>
@@ -347,10 +347,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/09/24/leetcode160/" rel="prev" title="leetcode160 Intersection of Two Linked Lists">
-                leetcode160 Intersection of Two Linked Lists <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -402,17 +398,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -463,22 +450,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-from-others"><span class="nav-number">2.</span> <span class="nav-text">Solution from others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-recursion"><span class="nav-number">2.1.</span> <span class="nav-text">Approach 1 : recursion</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
