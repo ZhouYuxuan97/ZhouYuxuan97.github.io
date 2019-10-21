@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Note,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,20 +79,13 @@
 
 
 
-<meta name="description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213141516   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key,">
-<meta name="keywords" content="Note">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaNote">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/page/3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213141516   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key,">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/image2.png">
-<meta property="og:updated_time" content="2019-10-13T21:40:49.645Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaNote">
-<meta name="twitter:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213141516   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key,">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/image2.png">
+<meta name="twitter:title" content="Hexo">
 
 
 
@@ -122,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/page/3/">
 
 
 
 
 
-  <title>JavaNote | Hexo</title>
+  <title>Hexo</title>
   
 
 
@@ -147,7 +140,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -220,9 +214,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -235,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/07/JavaNote/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/02/leetcode1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -252,7 +246,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaNote</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/ZhouYuxuan97.github.io/2019/09/02/leetcode1/" itemprop="url">leetcode1 Two Sum</a></h1>
         
 
         <div class="post-meta">
@@ -264,8 +260,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-07T01:33:33-04:00">
-                2019-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-02T22:36:11-04:00">
+                2019-09-02
               </time>
             
 
@@ -302,26 +298,19 @@
       
 
       
-        <h2 id="HashMap-HashSet"><a href="#HashMap-HashSet" class="headerlink" title="HashMap HashSet"></a>HashMap HashSet</h2><ul>
-<li>用哈希往往耗时更长</li>
-<li>Set就明显小于HashMap in runtime and space<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//Object1是key, Object2是value</span></span><br><span class="line">   Map&lt;Object1 ,Object2&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">   <span class="function">Object <span class="title">put</span><span class="params">(Object key, Object value)</span></span>;</span><br><span class="line">   <span class="function">Object <span class="title">get</span><span class="params">(Object key)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">containsKey</span><span class="params">(Object key)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">containsValue</span><span class="params">(Object value)</span></span>;</span><br><span class="line">   <span class="function"><span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>;</span><br><span class="line">   <span class="keyword">for</span>(Node node:map.keySet())&#123;</span><br><span class="line">            map.get(node).random=map.get(node.random);</span><br><span class="line">        &#125;<span class="comment">//ketSet store a set of key in map, it can be itrated by iterator</span></span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">```Java</span><br><span class="line">   Set&lt;ListNode&gt; nodesSeen = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">   nodesSeen.contains(head)</span><br><span class="line">   nodesSeen.add(head);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();  </span><br><span class="line">stack.push(<span class="string">')'</span>);  </span><br><span class="line">stack.pop();  </span><br><span class="line">stack.isEmpty();</span><br></pre></td></tr></table></figure>
-
-<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><ul>
-<li>取String里第n+1个字符, s.charAt(n)</li>
-</ul>
-<h2 id="ListNode"><a href="#ListNode" class="headerlink" title="ListNode"></a>ListNode</h2><ul>
-<li>如果有设置head则从head开始操作，如果没有则l1.next指向链表第二个节点<br><img src="image2.png" alt="image2"></li>
-</ul>
-<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><ul>
-<li>不需要键值对时用list函数进行查找比hashmap更快<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Object object&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"><span class="keyword">boolean</span> list.contains(Object value)</span><br><span class="line">Object list.add(p);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
+        
+          
+          Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have ex
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/ZhouYuxuan97.github.io/2019/09/02/leetcode1/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -336,40 +325,14 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/ZhouYuxuan97.github.io/tags/Note/" rel="tag"># Note</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/09/05/leetcode21/" rel="next" title="leetcode21 Merge Two Sorted Lists">
-                <i class="fa fa-chevron-left"></i> leetcode21 Merge Two Sorted Lists
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/09/07/leetcode141/" rel="prev" title="leetcode141 Linked List Cycle">
-                leetcode141 Linked List Cycle <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -379,11 +342,139 @@
   </article>
 
 
+    
+      
 
-    <div class="post-spread">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/02/My-Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yuxuan Zhou">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/ZhouYuxuan97.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/ZhouYuxuan97.github.io/2019/09/02/My-Blog/" itemprop="url">My First Blog</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-02T16:08:00-04:00">
+                2019-09-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="开篇题记"><a href="#开篇题记" class="headerlink" title="开篇题记"></a>开篇题记</h1><p>&ensp;&ensp;&ensp;&ensp;周宇轩(Zhou,Yuxuan)于美国纽约州雪城，EST 9/2/2019 创建本博客。</p>
+<p>&ensp;&ensp;&ensp;&ensp;使用Github Page + Hoex，在Git上绑定 <a href="http://www.zyx97.com" target="_blank" rel="noopener">www.zyx97.com</a> 域名<del>，本地使用Hexo Admin编辑工具</del>(可以编辑，但是无法发布，遂使用命令行发布)。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/ZhouYuxuan97.github.io/2019/09/02/My-Blog/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/ZhouYuxuan97.github.io/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/ZhouYuxuan97.github.io/">1</a><a class="page-number" href="/ZhouYuxuan97.github.io/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
 
 
           </div>
@@ -391,10 +482,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -415,17 +502,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -476,22 +554,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap-HashSet"><span class="nav-number">1.</span> <span class="nav-text">HashMap HashSet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-number">2.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">3.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ListNode"><span class="nav-number">4.</span> <span class="nav-text">ListNode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-number">5.</span> <span class="nav-text">List</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -632,10 +694,6 @@
 
 
   
-  <script type="text/javascript" src="/ZhouYuxuan97.github.io/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/ZhouYuxuan97.github.io/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
