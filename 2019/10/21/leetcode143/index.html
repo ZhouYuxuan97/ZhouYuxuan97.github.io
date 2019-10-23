@@ -79,23 +79,21 @@
 
 
 
-<meta name="description" content="Given a linked list, determine if it has a cycle in it. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail con">
+<meta name="description" content="Given a singly linked list L: L0→L1→…→Ln-1→Ln,reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→… You may not modify the values in the list’s nodes, only nodes itself may be changed. Example 1: Given 1-&amp;gt;2-&amp;gt;3">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode141 Linked List Cycle">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/index.html">
+<meta property="og:title" content="leetcode143 Reorder List">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/21/leetcode143/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Given a linked list, determine if it has a cycle in it. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail con">
+<meta property="og:description" content="Given a singly linked list L: L0→L1→…→Ln-1→Ln,reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→… You may not modify the values in the list’s nodes, only nodes itself may be changed. Example 1: Given 1-&amp;gt;2-&amp;gt;3">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/image.png">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/image2.png">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/image3.png">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/image4.png">
-<meta property="og:updated_time" content="2019-09-09T06:44:02.201Z">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/21/leetcode143/1.png">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/21/leetcode143/2.png">
+<meta property="og:updated_time" content="2019-10-23T05:37:03.268Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode141 Linked List Cycle">
-<meta name="twitter:description" content="Given a linked list, determine if it has a cycle in it. To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail con">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/image.png">
+<meta name="twitter:title" content="leetcode143 Reorder List">
+<meta name="twitter:description" content="Given a singly linked list L: L0→L1→…→Ln-1→Ln,reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→… You may not modify the values in the list’s nodes, only nodes itself may be changed. Example 1: Given 1-&amp;gt;2-&amp;gt;3">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/21/leetcode143/1.png">
 
 
 
@@ -125,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/07/leetcode141/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/10/21/leetcode143/">
 
 
 
 
 
-  <title>leetcode141 Linked List Cycle | Hexo</title>
+  <title>leetcode143 Reorder List | Hexo</title>
   
 
 
@@ -238,7 +236,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/07/leetcode141/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/10/21/leetcode143/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -255,7 +253,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode141 Linked List Cycle</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode143 Reorder List</h1>
         
 
         <div class="post-meta">
@@ -267,8 +265,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-07T02:12:07-04:00">
-                2019-09-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-21T14:42:58-04:00">
+                2019-10-21
               </time>
             
 
@@ -305,27 +303,16 @@
       
 
       
-        <p>Given a linked list, determine if it has a cycle in it.</p>
-<p>To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list.</p>
-<p><img src="image.png" alt="image"></p>
-<h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><ol>
-<li>Hashmap<ul>
-<li>put node into key is much faster than put node into value when using function of containsKey or containsValue <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        Map &lt;Integer, ListNode&gt; map = <span class="keyword">new</span> HashMap();</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(i&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(head==<span class="keyword">null</span>||head.next==<span class="keyword">null</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(map.containsValue(head))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(i, head);</span><br><span class="line">            head = head.next;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">false</span>; </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+        <p>Given a singly linked list L: L0→L1→…→Ln-1→Ln,<br>reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→…</p>
+<p>You may not modify the values in the list’s nodes, only nodes itself may be changed.</p>
+<p>Example 1:</p>
+<pre><code>Given 1-&gt;2-&gt;3-&gt;4, reorder it to 1-&gt;4-&gt;2-&gt;3.</code></pre><p>Example 2:</p>
+<pre><code>Given 1-&gt;2-&gt;3-&gt;4-&gt;5, reorder it to 1-&gt;5-&gt;2-&gt;4-&gt;3.</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1-Recursive"><a href="#Approach-1-Recursive" class="headerlink" title="Approach 1 Recursive"></a>Approach 1 Recursive</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reorderList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        ListNode dummy=<span class="keyword">new</span> ListNode(-<span class="number">1</span>);</span><br><span class="line">        dummy.next=head;</span><br><span class="line">        ListNode n1=dummy;</span><br><span class="line">        <span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n1.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            n1=n1.next;</span><br><span class="line">            c++;</span><br><span class="line">        &#125;</span><br><span class="line">        r(head,c);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">r</span><span class="params">(ListNode head,<span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(len&lt;=<span class="number">2</span>)&#123;<span class="keyword">return</span>;&#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            r(head.next,len-<span class="number">2</span>);</span><br><span class="line">            ListNode n1=head;</span><br><span class="line">            ListNode n2=n1;</span><br><span class="line">            <span class="keyword">int</span> c=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(c!=len-<span class="number">1</span>)&#123;</span><br><span class="line">                n1=n1.next; </span><br><span class="line">                c++;</span><br><span class="line">            &#125;</span><br><span class="line">            n2=n1.next;</span><br><span class="line">            n1.next=n2.next;</span><br><span class="line">            n2.next=head.next;</span><br><span class="line">            head.next=n2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-</li>
-</ol>
-<p><img src="image2.png" alt="image2"></p>
-<h2 id="Solution-from-others"><a href="#Solution-from-others" class="headerlink" title="Solution from others"></a>Solution from others</h2><h3 id="Approach-1-2-nodes-trace"><a href="#Approach-1-2-nodes-trace" class="headerlink" title="Approach 1 : 2 nodes trace"></a>Approach 1 : 2 nodes trace</h3><ul>
-<li>node1 is move 1 step faster than node2 each time, they will meet eventually</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;       </span><br><span class="line">        ListNode s = head;</span><br><span class="line">        ListNode f = head;</span><br><span class="line">        <span class="keyword">while</span> (s != <span class="keyword">null</span> &amp;&amp; f != <span class="keyword">null</span> &amp;&amp; f.next != <span class="keyword">null</span>)  &#123;</span><br><span class="line">            s = s.next;</span><br><span class="line">            f = f.next.next;</span><br><span class="line">            <span class="keyword">if</span> (s == f) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;        </span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="1.png" alt="image"></p>
+<h3 id="Approach-2-Stack"><a href="#Approach-2-Stack" class="headerlink" title="Approach 2 Stack"></a>Approach 2 Stack</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">reorderList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(head==<span class="keyword">null</span>||head.next==<span class="keyword">null</span>)</span><br><span class="line">           <span class="keyword">return</span>;</span><br><span class="line">        ListNode n1=head;</span><br><span class="line">        ListNode n2=head;</span><br><span class="line">        Stack&lt;ListNode&gt; s = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span>(n2!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(n2.next!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            n1=n1.next;</span><br><span class="line">            n2=n2.next.next;&#125;<span class="keyword">else</span> n2=n2.next;</span><br><span class="line">        &#125;</span><br><span class="line">        n2=n1;</span><br><span class="line">        n1=n1.next;</span><br><span class="line">        n2.next=<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">while</span>(n1!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            n2=n1.next;</span><br><span class="line">            s.push(n1);</span><br><span class="line">            n1=n2;</span><br><span class="line">        &#125;</span><br><span class="line">        n1=head;</span><br><span class="line">        <span class="keyword">while</span>(!s.isEmpty())&#123;</span><br><span class="line">            n2=n1.next;</span><br><span class="line">            n1.next=s.pop();</span><br><span class="line">            n1.next.next=n2;</span><br><span class="line">            n1=n2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="image3.png" alt="image3"></p>
-<h3 id="Approach-2-HashSet"><a href="#Approach-2-HashSet" class="headerlink" title="Approach 2 : HashSet"></a>Approach 2 : HashSet</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasCycle</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    Set&lt;ListNode&gt; nodesSeen = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">    <span class="keyword">while</span> (head != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nodesSeen.contains(head)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            nodesSeen.add(head);</span><br><span class="line">        &#125;</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="image4.png" alt="image4"></p>
+<p><img src="2.png" alt="image2"></p>
 
       
     </div>
@@ -356,8 +343,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/09/07/JavaNote/" rel="next" title="JavaNote">
-                <i class="fa fa-chevron-left"></i> JavaNote
+              <a href="/ZhouYuxuan97.github.io/2019/10/20/leetcode86/" rel="next" title="leetcode86 Partition List">
+                <i class="fa fa-chevron-left"></i> leetcode86 Partition List
               </a>
             
           </div>
@@ -366,8 +353,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/09/07/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/ZhouYuxuan97.github.io/2019/10/23/leetcode148/" rel="prev" title="leetcode148 Sort List">
+                leetcode148 Sort List <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -491,7 +478,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-from-others"><span class="nav-number">2.</span> <span class="nav-text">Solution from others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-2-nodes-trace"><span class="nav-number">2.1.</span> <span class="nav-text">Approach 1 : 2 nodes trace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-2-HashSet"><span class="nav-number">2.2.</span> <span class="nav-text">Approach 2 : HashSet</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-Recursive"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1 Recursive</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-2-Stack"><span class="nav-number">1.2.</span> <span class="nav-text">Approach 2 Stack</span></a></li></ol></li></ol></div>
             
 
           </div>
