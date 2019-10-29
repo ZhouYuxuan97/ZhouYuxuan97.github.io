@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,14 +79,20 @@
 
 
 
+<meta name="description" content="Implement atoi which converts a string to an integer. The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode8">
+<meta property="og:title" content="leetcode8 String to Integer (atoi)">
 <meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/24/leetcode8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Implement atoi which converts a string to an integer. The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-24T04:06:15.422Z">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/24/leetcode8/1.png">
+<meta property="og:updated_time" content="2019-10-29T02:14:11.972Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode8">
+<meta name="twitter:title" content="leetcode8 String to Integer (atoi)">
+<meta name="twitter:description" content="Implement atoi which converts a string to an integer. The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/24/leetcode8/1.png">
 
 
 
@@ -122,7 +128,7 @@
 
 
 
-  <title>leetcode8 | Hexo</title>
+  <title>leetcode8 String to Integer (atoi) | Hexo</title>
   
 
 
@@ -246,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode8</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode8 String to Integer (atoi)</h1>
         
 
         <div class="post-meta">
@@ -296,7 +302,33 @@
       
 
       
-        
+        <p>Implement atoi which converts a string to an integer.</p>
+<p>The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.</p>
+<p>The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.</p>
+<p>If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.</p>
+<p>If no valid conversion could be performed, a zero value is returned.</p>
+<p>Note:</p>
+<p>Only the space character ‘ ‘ is considered as whitespace character.<br>Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. If the numerical value is out of the range of representable values, INT_MAX (231 − 1) or INT_MIN (−231) is returned.<br>Example 1:</p>
+<pre><code>Input: &quot;42&quot;
+Output: 42</code></pre><p>Example 2:</p>
+<pre><code>Input: &quot;   -42&quot;
+Output: -42
+Explanation: The first non-whitespace character is &apos;-&apos;, which is the minus sign.
+         Then take as many numerical digits as possible, which gets 42.</code></pre><p>Example 3:</p>
+<pre><code>Input: &quot;4193 with words&quot;
+Output: 4193
+Explanation: Conversion stops at digit &apos;3&apos; as the next character is not a numerical digit.</code></pre><p>Example 4:</p>
+<pre><code>Input: &quot;words and 987&quot;
+Output: 0
+Explanation: The first non-whitespace character is &apos;w&apos;, which is not a numerical 
+         digit or a +/- sign. Therefore no valid conversion could be performed.</code></pre><p>Example 5:</p>
+<pre><code>Input: &quot;-91283472332&quot;
+Output: -2147483648
+Explanation: The number &quot;-91283472332&quot; is out of the range of a 32-bit signed integer.
+         Thefore INT_MIN (−231) is returned.</code></pre><h2 id="Solution-by-others"><a href="#Solution-by-others" class="headerlink" title="Solution by others"></a>Solution by others</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">myAtoi</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str != <span class="keyword">null</span>) &#123;</span><br><span class="line">      str = str.trim();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (str.length() == <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// take data type as long so that we can  store overflown values</span></span><br><span class="line">    <span class="keyword">long</span> num = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">boolean</span> isNegative = <span class="keyword">false</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//move to first character and keep track of sign by updating isNegative</span></span><br><span class="line">    <span class="keyword">if</span> (str.charAt(<span class="number">0</span>) == <span class="string">'-'</span>) &#123;</span><br><span class="line">      i++;</span><br><span class="line">      isNegative = <span class="keyword">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str.charAt(<span class="number">0</span>) == <span class="string">'+'</span>) &#123;</span><br><span class="line">      i++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//check if the character is digit by comparing ascii values</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt; str.length() &amp;&amp; ((<span class="keyword">int</span>)str.charAt(i)) &gt;= <span class="number">48</span> &amp;&amp;  ((<span class="keyword">int</span>)str.charAt(i)) &lt;= <span class="number">57</span>) &#123;</span><br><span class="line">    </span><br><span class="line">      <span class="comment">//form the number with digits</span></span><br><span class="line">      num = num * <span class="number">10</span> + ((<span class="keyword">int</span>)str.charAt(i) - <span class="number">48</span>);</span><br><span class="line">      i++;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (isNegative &amp;&amp; -num &lt;= Integer.MIN_VALUE) &#123;</span><br><span class="line">        <span class="keyword">return</span> Integer.MIN_VALUE;</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!isNegative &amp;&amp; num &gt;= Integer.MAX_VALUE) &#123;</span><br><span class="line">        <span class="keyword">return</span> Integer.MAX_VALUE;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (isNegative) &#123;</span><br><span class="line">      <span class="keyword">return</span> (<span class="keyword">int</span>) -num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>) num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="1.png" alt="image"></p>
+
       
     </div>
     
@@ -311,6 +343,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/ZhouYuxuan97.github.io/tags/leetcode/" rel="tag"># leetcode</a>
+          
+        </div>
+      
 
       
       
@@ -320,8 +358,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/10/23/leetcode7/" rel="next" title="leetcode7">
-                <i class="fa fa-chevron-left"></i> leetcode7
+              <a href="/ZhouYuxuan97.github.io/2019/10/23/leetcode7/" rel="next" title="leetcode7 Reverse Integer">
+                <i class="fa fa-chevron-left"></i> leetcode7 Reverse Integer
               </a>
             
           </div>
@@ -380,8 +418,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -432,6 +479,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-others"><span class="nav-number">1.</span> <span class="nav-text">Solution by others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

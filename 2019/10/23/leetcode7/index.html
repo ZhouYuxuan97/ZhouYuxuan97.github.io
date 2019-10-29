@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="leetcode,">
 
 
 
@@ -79,14 +79,20 @@
 
 
 
+<meta name="description" content="Given a 32-bit signed integer, reverse digits of an integer. Example 1: Input: 123 Output: 321Example 2: Input: -123 Output: -321Example 3: Input: 120 Output: 21Solution by myselfApproach 112345678910">
+<meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode7">
+<meta property="og:title" content="leetcode7 Reverse Integer">
 <meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode7/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Given a 32-bit signed integer, reverse digits of an integer. Example 1: Input: 123 Output: 321Example 2: Input: -123 Output: -321Example 3: Input: 120 Output: 21Solution by myselfApproach 112345678910">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-24T03:22:57.776Z">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode7/1.png">
+<meta property="og:updated_time" content="2019-10-24T05:02:25.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode7">
+<meta name="twitter:title" content="leetcode7 Reverse Integer">
+<meta name="twitter:description" content="Given a 32-bit signed integer, reverse digits of an integer. Example 1: Input: 123 Output: 321Example 2: Input: -123 Output: -321Example 3: Input: 120 Output: 21Solution by myselfApproach 112345678910">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode7/1.png">
 
 
 
@@ -122,7 +128,7 @@
 
 
 
-  <title>leetcode7 | Hexo</title>
+  <title>leetcode7 Reverse Integer | Hexo</title>
   
 
 
@@ -246,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode7</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode7 Reverse Integer</h1>
         
 
         <div class="post-meta">
@@ -296,7 +302,17 @@
       
 
       
-        
+        <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
+<p>Example 1:</p>
+<pre><code>Input: 123
+Output: 321</code></pre><p>Example 2:</p>
+<pre><code>Input: -123
+Output: -321</code></pre><p>Example 3:</p>
+<pre><code>Input: 120
+Output: 21</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;       </span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(ans &gt; Integer.MAX_VALUE/<span class="number">10</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(ans &lt; Integer.MIN_VALUE/<span class="number">10</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            ans *= <span class="number">10</span>;</span><br><span class="line">            ans += x % <span class="number">10</span>;</span><br><span class="line">            x = x / <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="1.png" alt="image"></p>
+
       
     </div>
     
@@ -310,6 +326,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/ZhouYuxuan97.github.io/tags/leetcode/" rel="tag"># leetcode</a>
+          
+        </div>
       
 
       
@@ -330,8 +352,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/10/24/leetcode8/" rel="prev" title="leetcode8">
-                leetcode8 <i class="fa fa-chevron-right"></i>
+              <a href="/ZhouYuxuan97.github.io/2019/10/24/leetcode8/" rel="prev" title="leetcode8 String to Integer (atoi)">
+                leetcode8 String to Integer (atoi) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -384,8 +406,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -436,6 +467,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
