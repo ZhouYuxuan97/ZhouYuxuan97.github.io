@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="Given a 32-bit signed integer, reverse digits of an integer. Example 1: Input: 123 Output: 321Example 2: Input: -123 Output: -321Example 3: Input: 120 Output: 21Solution by myselfApproach 112345678910">
+<meta name="description" content="Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: Input: 121 Output: trueExample 2: Input: -121 Output: false Explanation:">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode7 Reverse Integer">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode7/index.html">
+<meta property="og:title" content="leetcode9 Palindrome Number">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode9/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Given a 32-bit signed integer, reverse digits of an integer. Example 1: Input: 123 Output: 321Example 2: Input: -123 Output: -321Example 3: Input: 120 Output: 21Solution by myselfApproach 112345678910">
+<meta property="og:description" content="Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: Input: 121 Output: trueExample 2: Input: -121 Output: false Explanation:">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode7/1.png">
-<meta property="og:updated_time" content="2019-10-24T05:02:25.771Z">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode9/1.png">
+<meta property="og:updated_time" content="2019-11-10T06:27:24.184Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode7 Reverse Integer">
-<meta name="twitter:description" content="Given a 32-bit signed integer, reverse digits of an integer. Example 1: Input: 123 Output: 321Example 2: Input: -123 Output: -321Example 3: Input: 120 Output: 21Solution by myselfApproach 112345678910">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode7/1.png">
+<meta name="twitter:title" content="leetcode9 Palindrome Number">
+<meta name="twitter:description" content="Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: Input: 121 Output: trueExample 2: Input: -121 Output: false Explanation:">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode9/1.png">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/10/23/leetcode7/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/11/10/leetcode9/">
 
 
 
 
 
-  <title>leetcode7 Reverse Integer | Hexo</title>
+  <title>leetcode9 Palindrome Number | Hexo</title>
   
 
 
@@ -235,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/10/23/leetcode7/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/11/10/leetcode9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -252,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode7 Reverse Integer</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode9 Palindrome Number</h1>
         
 
         <div class="post-meta">
@@ -264,8 +264,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-23T23:22:57-04:00">
-                2019-10-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-10T00:44:34-05:00">
+                2019-11-10
               </time>
             
 
@@ -302,14 +302,16 @@
       
 
       
-        <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
+        <p>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.</p>
 <p>Example 1:</p>
-<pre><code>Input: 123
-Output: 321</code></pre><p>Example 2:</p>
-<pre><code>Input: -123
-Output: -321</code></pre><p>Example 3:</p>
-<pre><code>Input: 120
-Output: 21</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;       </span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(ans &gt; Integer.MAX_VALUE/<span class="number">10</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">if</span>(ans &lt; Integer.MIN_VALUE/<span class="number">10</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            ans *= <span class="number">10</span>;</span><br><span class="line">            ans += x % <span class="number">10</span>;</span><br><span class="line">            x = x / <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>Input: 121
+Output: true</code></pre><p>Example 2:</p>
+<pre><code>Input: -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.</code></pre><p>Example 3:</p>
+<pre><code>Input: 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&lt;<span class="number">0</span> )</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">int</span> y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> x1=x;</span><br><span class="line">        <span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x1!=<span class="number">0</span>)&#123;</span><br><span class="line">            t=x1%<span class="number">10</span>;</span><br><span class="line">            x1=x1/<span class="number">10</span>;</span><br><span class="line">            y=<span class="number">10</span>*y+t;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(x==y)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><img src="1.png" alt="image"></p>
 
@@ -342,8 +344,8 @@ Output: 21</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself"
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/10/23/leetcode25/" rel="next" title="leetcode25 Reverse Nodes in k-Group">
-                <i class="fa fa-chevron-left"></i> leetcode25 Reverse Nodes in k-Group
+              <a href="/ZhouYuxuan97.github.io/2019/10/24/leetcode8/" rel="next" title="leetcode8 String to Integer (atoi)">
+                <i class="fa fa-chevron-left"></i> leetcode8 String to Integer (atoi)
               </a>
             
           </div>
@@ -351,10 +353,6 @@ Output: 21</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself"
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/10/24/leetcode8/" rel="prev" title="leetcode8 String to Integer (atoi)">
-                leetcode8 String to Integer (atoi) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
