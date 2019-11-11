@@ -88,7 +88,7 @@
 <meta property="og:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213141516   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key,">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/image2.png">
-<meta property="og:updated_time" content="2019-10-24T01:47:16.545Z">
+<meta property="og:updated_time" content="2019-11-11T02:38:45.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaNote">
 <meta name="twitter:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space12345678910111213141516   //Object1是key, Object2是value   Map&amp;lt;Object1 ,Object2&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Object put(Object key,">
@@ -326,6 +326,18 @@
 
 </li>
 </ul>
+<p>##位运算符</p>
+<ul>
+<li>Java提供的位运算符有：左移( &lt;&lt; )、右移( &gt;&gt; ) 、无符号右移( &gt;&gt;&gt; ) 、位与( &amp; ) 、位或( | )、位非( ~ )、位异或( ^ )，除了位非( ~ )是一元操作符外，其它的都是二元操作符。</li>
+</ul>
+<p>1、左移( &lt;&lt; )</p>
+<p>Test1、将5左移2位：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="number">5</span>&lt;&lt;<span class="number">2</span>);<span class="comment">//运行结果是20</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先会将5转为2进制表示形式(java中，整数默认就是int类型,也就是32位):</p>
+<p>0000 0000 0000 0000 0000 0000 0000 0101           然后左移2位后，低位补0：</p>
+<p>0000 0000 0000 0000 0000 0000 0001 0100           换算成10进制为20</p>
+<p>Example:leetcode231<br>ref:<a href="https://blog.csdn.net/xiaochunyong/article/details/7748713" target="_blank" rel="noopener">https://blog.csdn.net/xiaochunyong/article/details/7748713</a></p>
 
       
     </div>
@@ -445,7 +457,7 @@
               
                 <a href="/ZhouYuxuan97.github.io/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

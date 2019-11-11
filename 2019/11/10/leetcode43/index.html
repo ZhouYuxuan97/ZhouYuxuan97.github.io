@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="Given a linked list, reverse the nodes of a linked list k at a time and return its modified list. k is a positive integer and is less than or equal to the length of the linked list. If the number of n">
+<meta name="description" content="Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string. Example 1: Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Ou">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode25 Reverse Nodes in k-Group">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode25/index.html">
+<meta property="og:title" content="leetcode43 Multiply Strings">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode43/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Given a linked list, reverse the nodes of a linked list k at a time and return its modified list. k is a positive integer and is less than or equal to the length of the linked list. If the number of n">
+<meta property="og:description" content="Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string. Example 1: Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Ou">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode25/1.png">
-<meta property="og:updated_time" content="2019-10-24T02:59:08.360Z">
+<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode43/1.png">
+<meta property="og:updated_time" content="2019-11-11T03:04:07.494Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode25 Reverse Nodes in k-Group">
-<meta name="twitter:description" content="Given a linked list, reverse the nodes of a linked list k at a time and return its modified list. k is a positive integer and is less than or equal to the length of the linked list. If the number of n">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode25/1.png">
+<meta name="twitter:title" content="leetcode43 Multiply Strings">
+<meta name="twitter:description" content="Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string. Example 1: Input: num1 = &amp;quot;2&amp;quot;, num2 = &amp;quot;3&amp;quot; Ou">
+<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode43/1.png">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/10/23/leetcode25/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/11/10/leetcode43/">
 
 
 
 
 
-  <title>leetcode25 Reverse Nodes in k-Group | Hexo</title>
+  <title>leetcode43 Multiply Strings | Hexo</title>
   
 
 
@@ -235,7 +235,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/10/23/leetcode25/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/11/10/leetcode43/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -252,7 +252,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode25 Reverse Nodes in k-Group</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode43 Multiply Strings</h1>
         
 
         <div class="post-meta">
@@ -264,8 +264,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-23T22:56:57-04:00">
-                2019-10-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-10T22:02:23-05:00">
+                2019-11-10
               </time>
             
 
@@ -302,21 +302,16 @@
       
 
       
-        <p>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.</p>
-<p>k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.</p>
-<p>Example:</p>
-<pre><code>Given this linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5
+        <p>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.</p>
+<p>Example 1:</p>
+<pre><code>Input: num1 = &quot;2&quot;, num2 = &quot;3&quot;
+Output: &quot;6&quot;</code></pre><p>Example 2:</p>
+<pre><code>Input: num1 = &quot;123&quot;, num2 = &quot;456&quot;
+Output: &quot;56088&quot;</code></pre><p>Note:</p>
+<p>The length of both num1 and num2 is &lt; 110.<br>    Both num1 and num2 contain only digits 0-9.<br>    Both num1 and num2 do not contain any leading zero, except the number 0 itself.<br>    You must not use any built-in BigInteger library or convert the inputs to integer directly.</p>
+<h2 id="Solution-by-others"><a href="#Solution-by-others" class="headerlink" title="Solution by others"></a>Solution by others</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">multiply</span><span class="params">(String num1, String num2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> firstLength = num1.length();</span><br><span class="line">        <span class="keyword">int</span> secondLength = num2.length();</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">int</span>[] resArr = <span class="keyword">new</span> <span class="keyword">int</span>[firstLength + secondLength];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i= firstLength-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i-- )&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j= secondLength-<span class="number">1</span>; j&gt;=<span class="number">0</span>; j-- )&#123;</span><br><span class="line">                <span class="keyword">int</span> temp = (num1.charAt(i)-<span class="string">'0'</span>)*(num2.charAt(j)-<span class="string">'0'</span>);</span><br><span class="line">                temp += resArr[i+j+<span class="number">1</span>];</span><br><span class="line">                resArr[i+j+<span class="number">1</span>] = temp%<span class="number">10</span>;</span><br><span class="line">                resArr[i+j] += temp/<span class="number">10</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">boolean</span> nonZeroFound = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i : resArr)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i != <span class="number">0</span>) nonZeroFound = <span class="keyword">true</span>;</span><br><span class="line">            <span class="keyword">if</span>(nonZeroFound) sb.append(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!nonZeroFound) sb.append(<span class="string">"0"</span>);</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-For k = 2, you should return: 2-&gt;1-&gt;4-&gt;3-&gt;5
-
-For k = 3, you should return: 3-&gt;2-&gt;1-&gt;4-&gt;5</code></pre><p>Note:</p>
-<ul>
-<li>Only constant extra memory is allowed.</li>
-<li>You may not alter the values in the list’s nodes, only nodes itself may be changed.</li>
-</ul>
-<h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">     <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseKGroup</span><span class="params">(ListNode head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        ListNode dummy=<span class="keyword">new</span> ListNode(-<span class="number">1</span>);</span><br><span class="line">        dummy.next=head;</span><br><span class="line">        ListNode n1=dummy;</span><br><span class="line">        ListNode n2=n1,n3=<span class="keyword">null</span>,n4=<span class="keyword">null</span>,temp=<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">int</span> c=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(n1!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(c%k==<span class="number">0</span>&amp;&amp;c!=<span class="number">0</span>)&#123;</span><br><span class="line">                n3=n1.next;</span><br><span class="line">                n4=n2.next;</span><br><span class="line">                n2.next=reverse(n4,n1);</span><br><span class="line">                n4.next=n3;</span><br><span class="line">                n1=n4;</span><br><span class="line">                n2=n1;</span><br><span class="line">                c=<span class="number">0</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                n1=n1.next;</span><br><span class="line">                c++;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy.next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverse</span><span class="params">(ListNode head, ListNode tail)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==tail||head==<span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode n=head.next;</span><br><span class="line">        ListNode n1=head;</span><br><span class="line">        ListNode temp=<span class="keyword">null</span>;</span><br><span class="line">        ListNode tnext=tail.next;</span><br><span class="line">        <span class="keyword">while</span>(n!=tnext)&#123;</span><br><span class="line">            temp=n.next;</span><br><span class="line">            n.next=n1;</span><br><span class="line">            n1=n;</span><br><span class="line">            n=temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> tail;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="1.png" alt="image"></p>
+<p><img src="1.png" alt="image1"></p>
 
       
     </div>
@@ -347,8 +342,8 @@ For k = 3, you should return: 3-&gt;2-&gt;1-&gt;4-&gt;5</code></pre><p>Note:</p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/10/23/leetcode23/" rel="next" title="leetcode23 Merge k Sorted Lists">
-                <i class="fa fa-chevron-left"></i> leetcode23 Merge k Sorted Lists
+              <a href="/ZhouYuxuan97.github.io/2019/11/10/leetcode258/" rel="next" title="leetcode258 Add Digits">
+                <i class="fa fa-chevron-left"></i> leetcode258 Add Digits
               </a>
             
           </div>
@@ -356,10 +351,6 @@ For k = 3, you should return: 3-&gt;2-&gt;1-&gt;4-&gt;5</code></pre><p>Note:</p>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/10/23/leetcode7/" rel="prev" title="leetcode7 Reverse Integer">
-                leetcode7 Reverse Integer <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -482,7 +473,7 @@ For k = 3, you should return: 3-&gt;2-&gt;1-&gt;4-&gt;5</code></pre><p>Note:</p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-others"><span class="nav-number">1.</span> <span class="nav-text">Solution by others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
             
 
           </div>
