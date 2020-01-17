@@ -88,7 +88,7 @@
 <meta property="og:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space123456789101112131415161718192021222324252627282930313233343536373839404142434445464748   //Object1是key, Object2是value   Map&amp;lt;Object1 ,O">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/image2.png">
-<meta property="og:updated_time" content="2019-11-19T06:38:11.084Z">
+<meta property="og:updated_time" content="2020-01-17T06:28:45.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaNote">
 <meta name="twitter:description" content="HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space123456789101112131415161718192021222324252627282930313233343536373839404142434445464748   //Object1是key, Object2是value   Map&amp;lt;Object1 ,O">
@@ -317,7 +317,7 @@
 <li>如果有设置head则从head开始操作，如果没有则l1.next指向链表第二个节点<br><img src="image2.png" alt="image2"></li>
 </ul>
 <h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><ul>
-<li>不需要键值对时用list函数进行查找比hashmap更快<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Object object&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"><span class="keyword">boolean</span> list.contains(Object value)</span><br><span class="line">Object list.add(p);</span><br></pre></td></tr></table></figure>
+<li>不需要键值对时用list函数进行查找比hashmap更快<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Object object&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"><span class="keyword">boolean</span> list.contains(Object value)</span><br><span class="line">Object list.add(p);</span><br><span class="line">List&lt;String&gt; name = Arrays.asList(<span class="string">"xxx"</span>,<span class="string">"yyy"</span>,<span class="string">"zzz"</span>);(不过这样的话这个list的size就固定了，不能再add了，要注意。)</span><br><span class="line">List&lt;String&gt; name = <span class="keyword">new</span> ArrayList&lt;&gt;(Arrays.asList(<span class="string">"xxx"</span>,<span class="string">"yyy"</span>,<span class="string">"zzz"</span>));</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -526,7 +526,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
