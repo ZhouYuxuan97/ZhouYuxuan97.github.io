@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: Input: 121 Output: trueExample 2: Input: -121 Output: false Explanation:">
+<meta name="description" content="Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n). Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output:">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode9 Palindrome Number">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode9/index.html">
+<meta property="og:title" content="leetcode76 Minimum Window Substring">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2020/06/28/leetcode76/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: Input: 121 Output: trueExample 2: Input: -121 Output: false Explanation:">
+<meta property="og:description" content="Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n). Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output:">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode9/1.png">
-<meta property="og:updated_time" content="2019-11-10T06:27:24.184Z">
+<meta property="og:updated_time" content="2020-06-28T21:10:53.827Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode9 Palindrome Number">
-<meta name="twitter:description" content="Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: Input: 121 Output: trueExample 2: Input: -121 Output: false Explanation:">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode9/1.png">
+<meta name="twitter:title" content="leetcode76 Minimum Window Substring">
+<meta name="twitter:description" content="Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n). Example: Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot; Output:">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/11/10/leetcode9/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2020/06/28/leetcode76/">
 
 
 
 
 
-  <title>leetcode9 Palindrome Number | Hexo</title>
+  <title>leetcode76 Minimum Window Substring | Hexo</title>
   
 
 
@@ -235,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/11/10/leetcode9/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2020/06/28/leetcode76/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -252,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode9 Palindrome Number</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode76 Minimum Window Substring</h1>
         
 
         <div class="post-meta">
@@ -264,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-10T00:44:34-05:00">
-                2019-11-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-28T17:09:42-04:00">
+                2020-06-28
               </time>
             
 
@@ -302,19 +300,12 @@
       
 
       
-        <p>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.</p>
-<p>Example 1:</p>
-<pre><code>Input: 121
-Output: true</code></pre><p>Example 2:</p>
-<pre><code>Input: -121
-Output: false
-Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.</code></pre><p>Example 3:</p>
-<pre><code>Input: 10
-Output: false
-Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&lt;<span class="number">0</span> )</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">int</span> y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> x1=x;</span><br><span class="line">        <span class="keyword">int</span> t=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(x1!=<span class="number">0</span>)&#123;</span><br><span class="line">            t=x1%<span class="number">10</span>;</span><br><span class="line">            x1=x1/<span class="number">10</span>;</span><br><span class="line">            y=<span class="number">10</span>*y+t;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(x==y)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="1.png" alt="image"></p>
-
+        <p>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).</p>
+<p>Example:</p>
+<pre><code>Input: S = &quot;ADOBECODEBANC&quot;, T = &quot;ABC&quot;
+Output: &quot;BANC&quot;</code></pre><p>Note:</p>
+<p>If there is no such window in S that covers all characters in T, return the empty string “”.<br>If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</p>
+<h2 id="Solution-by-others"><a href="#Solution-by-others" class="headerlink" title="Solution by others"></a>Solution by others</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">minWindow</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(s == <span class="keyword">null</span> || s.length() &lt; t.length())&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        &#125;   </span><br><span class="line">        <span class="keyword">int</span> tcount[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">256</span>];</span><br><span class="line">        <span class="keyword">int</span> scount[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">256</span>];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; t.length(); i++)&#123;</span><br><span class="line">            tcount[t.charAt(i)]++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> min_len =  Integer.MAX_VALUE;</span><br><span class="line">        String res = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line">            scount[s.charAt(i)]++;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(tcount[s.charAt(i)] &gt; <span class="number">0</span> &amp;&amp; tcount[s.charAt(i)] &gt;= scount[s.charAt(i)])&#123;</span><br><span class="line">                c++;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(c == t.length())&#123;</span><br><span class="line">                <span class="keyword">while</span>(scount[s.charAt(start)] &gt; tcount[s.charAt(start)])&#123;</span><br><span class="line">                   scount[s.charAt(start++)]--;</span><br><span class="line">               &#125; </span><br><span class="line">                </span><br><span class="line">                <span class="keyword">int</span> len = i - start + <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(len &lt; min_len)&#123;</span><br><span class="line">                    min_len = len;</span><br><span class="line">                    res = s.substring(start. start+len);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -344,8 +335,8 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</cod
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/10/24/leetcode8/" rel="next" title="leetcode8 String to Integer (atoi)">
-                <i class="fa fa-chevron-left"></i> leetcode8 String to Integer (atoi)
+              <a href="/ZhouYuxuan97.github.io/2020/06/28/leetcode84/" rel="next" title="leetcode84 Largest Rectangle in Histogram">
+                <i class="fa fa-chevron-left"></i> leetcode84 Largest Rectangle in Histogram
               </a>
             
           </div>
@@ -354,8 +345,8 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</cod
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/11/10/leetcode12/" rel="prev" title="leetcode12 Integer to Roman">
-                leetcode12 Integer to Roman <i class="fa fa-chevron-right"></i>
+              <a href="/ZhouYuxuan97.github.io/2020/06/28/leetcode88/" rel="prev" title="leetcode88">
+                leetcode88 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -479,7 +470,7 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</cod
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-others"><span class="nav-number">1.</span> <span class="nav-text">Solution by others</span></a></li></ol></div>
             
 
           </div>
