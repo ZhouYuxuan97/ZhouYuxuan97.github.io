@@ -79,23 +79,18 @@
 
 
 
-<meta name="description" content="Solution by myselfApproach 1 HashSet123456789101112131415161718public class Solution &amp;#123;    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;              Set&amp;lt;ListNode&amp;">
+<meta name="description" content="Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock),">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode160 Intersection of Two Linked Lists">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/09/24/leetcode160/index.html">
+<meta property="og:title" content="leetcode121 Best Time to Buy and Sell Stock">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2020/07/24/leetcode121/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Solution by myselfApproach 1 HashSet123456789101112131415161718public class Solution &amp;#123;    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;              Set&amp;lt;ListNode&amp;">
+<meta property="og:description" content="Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock),">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/24/leetcode160/2.png">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/24/leetcode160/3.png">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/24/leetcode160/1.png">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/24/leetcode160/4.png">
-<meta property="og:updated_time" content="2019-09-30T05:00:40.929Z">
+<meta property="og:updated_time" content="2020-07-24T21:10:03.247Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode160 Intersection of Two Linked Lists">
-<meta name="twitter:description" content="Solution by myselfApproach 1 HashSet123456789101112131415161718public class Solution &amp;#123;    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;              Set&amp;lt;ListNode&amp;">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/09/24/leetcode160/2.png">
+<meta name="twitter:title" content="leetcode121 Best Time to Buy and Sell Stock">
+<meta name="twitter:description" content="Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock),">
 
 
 
@@ -125,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/09/24/leetcode160/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2020/07/24/leetcode121/">
 
 
 
 
 
-  <title>leetcode160 Intersection of Two Linked Lists | Hexo</title>
+  <title>leetcode121 Best Time to Buy and Sell Stock | Hexo</title>
   
 
 
@@ -238,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/09/24/leetcode160/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2020/07/24/leetcode121/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -255,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode160 Intersection of Two Linked Lists</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode121 Best Time to Buy and Sell Stock</h1>
         
 
         <div class="post-meta">
@@ -267,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-24T00:10:51-04:00">
-                2019-09-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-24T17:09:24-04:00">
+                2020-07-24
               </time>
             
 
@@ -305,17 +300,14 @@
       
 
       
-        <p><img src="2.png" alt="image2"><br><img src="3.png" alt="image3"></p>
-<h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1-HashSet"><a href="#Approach-1-HashSet" class="headerlink" title="Approach 1 HashSet"></a>Approach 1 HashSet</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">getIntersectionNode</span><span class="params">(ListNode headA, ListNode headB)</span> </span>&#123;             </span><br><span class="line"> Set&lt;ListNode&gt; m = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        ListNode p=headA;</span><br><span class="line">        ListNode q=headB;</span><br><span class="line">        <span class="keyword">while</span>(p!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            m.add(p);</span><br><span class="line">            p=p.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(q!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(m.contains(q))&#123;</span><br><span class="line">                <span class="keyword">return</span> q;</span><br><span class="line">            &#125;             </span><br><span class="line">            q=q.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<p>If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
+<p>Note that you cannot sell a stock before you buy one.</p>
+<p>Example 1:</p>
+<p>Input: [7,1,5,3,6,4]<br>Output: 5<br>Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.<br>             Not 7-1 = 6, as selling price needs to be larger than buying price.<br>Example 2:</p>
+<p>Input: [7,6,4,3,1]<br>Output: 0<br>Explanation: In this case, no transaction is done, i.e. max profit = 0.</p>
+<h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> prof = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(prices.length &lt;= <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> prof;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> low = prices[<span class="number">0</span>];</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; prices.length; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(prices[i] &gt; low)&#123;</span><br><span class="line">                prof = Math.max((prices[i] - low),prof);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                low = prices[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> prof;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="1.png" alt="image1"></p>
-<h2 id="Solution-from-others"><a href="#Solution-from-others" class="headerlink" title="Solution from others"></a>Solution from others</h2><h3 id="Approach-1-find-common-position"><a href="#Approach-1-find-common-position" class="headerlink" title="Approach 1 : find common position"></a>Approach 1 : find common position</h3><ol>
-<li>find the node which rest of 2 listnodes are same length</li>
-<li>node=node.next until find the intersection<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">getIntersectionNode</span><span class="params">(ListNode headA, ListNode headB)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> lenA = length(headA);</span><br><span class="line">        <span class="keyword">int</span> lenB = length(headB);</span><br><span class="line">        <span class="keyword">while</span>(lenA &gt; lenB) &#123;</span><br><span class="line">            headA = headA.next;</span><br><span class="line">            lenA--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(lenB &gt; lenA) &#123;</span><br><span class="line">            headB = headB.next;</span><br><span class="line">            lenB--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(lenA &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span>(headA == headB) <span class="keyword">return</span> headA;</span><br><span class="line">            headA = headA.next;</span><br><span class="line">            headB = headB.next;</span><br><span class="line">            lenA--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">length</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(head != <span class="keyword">null</span>) &#123;</span><br><span class="line">            len++;</span><br><span class="line">            head = head.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> len;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p><img src="4.png" alt="image4"></p>
 
       
     </div>
@@ -346,8 +338,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/09/23/leetcode24/" rel="next" title="leetcode24 Swap Nodes in Pairs">
-                <i class="fa fa-chevron-left"></i> leetcode24 Swap Nodes in Pairs
+              <a href="/ZhouYuxuan97.github.io/2020/07/24/leetcode118/" rel="next" title="leetcode118 Pascal's Triangle">
+                <i class="fa fa-chevron-left"></i> leetcode118 Pascal's Triangle
               </a>
             
           </div>
@@ -355,10 +347,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/09/30/leetcode206/" rel="prev" title="leetcode206 Reverse Linked List">
-                leetcode206 Reverse Linked List <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -481,7 +469,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-HashSet"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1 HashSet</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-from-others"><span class="nav-number">2.</span> <span class="nav-text">Solution from others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-find-common-position"><span class="nav-number">2.1.</span> <span class="nav-text">Approach 1 : find common position</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
             
 
           </div>
