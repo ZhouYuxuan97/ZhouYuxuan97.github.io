@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Array,">
 
 
 
@@ -79,19 +79,18 @@
 
 
 
-<meta name="description" content="Given an integer, write a function to determine if it is a power of two. Example 1: Input: 1 Output: true  Explanation: 20 = 1Example 2: Input: 16 Output: true Explanation: 24 = 16Example 3: Input: 21">
+<meta name="description" content="Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area. Example: Input:[  [“1”,”0”,”1”,”0”,”0”],  [“1”,”0”,”1”,”1”,”1”],  [“1”,”1”,”1”,”1”">
+<meta name="keywords" content="Array">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode231 Power of Two">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode231/index.html">
+<meta property="og:title" content="leetcode85">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2020/07/30/leetcode85/index.html">
 <meta property="og:site_name" content="Yuxuan Zhou&#39;s Blog">
-<meta property="og:description" content="Given an integer, write a function to determine if it is a power of two. Example 1: Input: 1 Output: true  Explanation: 20 = 1Example 2: Input: 16 Output: true Explanation: 24 = 16Example 3: Input: 21">
+<meta property="og:description" content="Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area. Example: Input:[  [“1”,”0”,”1”,”0”,”0”],  [“1”,”0”,”1”,”1”,”1”],  [“1”,”1”,”1”,”1”">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode231/1.png">
-<meta property="og:updated_time" content="2020-07-30T03:32:55.089Z">
+<meta property="og:updated_time" content="2020-07-30T21:06:51.152Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode231 Power of Two">
-<meta name="twitter:description" content="Given an integer, write a function to determine if it is a power of two. Example 1: Input: 1 Output: true  Explanation: 20 = 1Example 2: Input: 16 Output: true Explanation: 24 = 16Example 3: Input: 21">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/11/10/leetcode231/1.png">
+<meta name="twitter:title" content="leetcode85">
+<meta name="twitter:description" content="Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area. Example: Input:[  [“1”,”0”,”1”,”0”,”0”],  [“1”,”0”,”1”,”1”,”1”],  [“1”,”1”,”1”,”1”">
 
 
 
@@ -121,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/11/10/leetcode231/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2020/07/30/leetcode85/">
 
 
 
 
 
-  <title>leetcode231 Power of Two | Yuxuan Zhou's Blog</title>
+  <title>leetcode85 | Yuxuan Zhou's Blog</title>
   
 
 
@@ -254,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/11/10/leetcode231/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2020/07/30/leetcode85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -271,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode231 Power of Two</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode85</h1>
         
 
         <div class="post-meta">
@@ -283,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-10T21:33:41-05:00">
-                2019-11-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-30T17:06:05-04:00">
+                2020-07-30
               </time>
             
 
@@ -344,18 +343,11 @@
       
 
       
-        <p>Given an integer, write a function to determine if it is a power of two.</p>
-<p>Example 1:</p>
-<pre><code>Input: 1
-Output: true 
-Explanation: 20 = 1</code></pre><p>Example 2:</p>
-<pre><code>Input: 16
-Output: true
-Explanation: 24 = 16</code></pre><p>Example 3:</p>
-<pre><code>Input: 218
-Output: false</code></pre><h2 id="Solution-by-others"><a href="#Solution-by-others" class="headerlink" title="Solution by others"></a>Solution by others</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPowerOfTwo</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;     </span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> (n &amp; (n - <span class="number">1</span>)) == <span class="number">0</span>;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area.</p>
+<p>Example:</p>
+<p>Input:<br>[<br>  [“1”,”0”,”1”,”0”,”0”],<br>  [“1”,”0”,”1”,”1”,”1”],<br>  [“1”,”1”,”1”,”1”,”1”],<br>  [“1”,”0”,”0”,”1”,”0”]<br>]<br>Output: 6</p>
+<h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maximalRectangle</span><span class="params">(<span class="keyword">char</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(matrix.length == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;        </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> hor[][] = <span class="keyword">new</span> <span class="keyword">int</span>[matrix.length + <span class="number">1</span>][matrix[<span class="number">0</span>].length + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> ver[][] = <span class="keyword">new</span> <span class="keyword">int</span>[matrix.length + <span class="number">1</span>][matrix[<span class="number">0</span>].length + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> max_single_line = <span class="number">0</span>;</span><br><span class="line">               </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; matrix.length+<span class="number">1</span>; i++)&#123;</span><br><span class="line">           <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; matrix[<span class="number">0</span>].length+<span class="number">1</span>; j++)&#123;</span><br><span class="line">               <span class="keyword">if</span>(matrix[i-<span class="number">1</span>][j-<span class="number">1</span>] != <span class="string">'0'</span>)&#123; </span><br><span class="line">                   <span class="keyword">if</span>(hor[i][j-<span class="number">1</span>] != <span class="number">0</span>)&#123;</span><br><span class="line">                        hor[i][j] = hor[i][j-<span class="number">1</span>] - <span class="number">1</span>;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> k = j; k &lt; matrix[<span class="number">0</span>].length+<span class="number">1</span>; k++)&#123;</span><br><span class="line">                            <span class="keyword">if</span>(matrix[i-<span class="number">1</span>][k-<span class="number">1</span>] == <span class="string">'1'</span>)&#123;</span><br><span class="line">                                hor[i][j]++;</span><br><span class="line">                            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                   <span class="keyword">if</span>(ver[i-<span class="number">1</span>][j] != <span class="number">0</span>)&#123;</span><br><span class="line">                        ver[i][j] = ver[i-<span class="number">1</span>][j] - <span class="number">1</span>;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> k = i; k &lt; matrix.length+<span class="number">1</span>; k++)&#123;</span><br><span class="line">                            <span class="keyword">if</span>(matrix[k-<span class="number">1</span>][j-<span class="number">1</span>] == <span class="string">'1'</span>)&#123;</span><br><span class="line">                                ver[i][j]++;</span><br><span class="line">                            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                   max_single_line = Math.max(Math.max(ver[i][j], hor[i][j]),max_single_line);</span><br><span class="line">               &#125;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; matrix.length+<span class="number">1</span>; i++)&#123;</span><br><span class="line">           <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; matrix[<span class="number">0</span>].length+<span class="number">1</span>; j++)&#123;</span><br><span class="line">                <span class="keyword">int</span> length = hor[i][j];</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> a = <span class="number">1</span>; a &lt; ver[i][j]; a++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(hor[i+a][j] &lt; length)&#123;</span><br><span class="line">                        length = hor[i+a][j];</span><br><span class="line">                    &#125;</span><br><span class="line">                    res= Math.max(res, (a+<span class="number">1</span>) * length);          </span><br><span class="line">                 &#125;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> Math.max(res,max_single_line);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="1.png" alt="image"></p>
 
       
     </div>
@@ -371,6 +363,12 @@ Output: false</code></pre><h2 id="Solution-by-others"><a href="#Solution-by-othe
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/ZhouYuxuan97.github.io/tags/Array/" rel="tag"># Array</a>
+          
+        </div>
+      
 
       
       
@@ -380,8 +378,8 @@ Output: false</code></pre><h2 id="Solution-by-others"><a href="#Solution-by-othe
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/11/10/leetcode13/" rel="next" title="leetcode13 Roman to Integer">
-                <i class="fa fa-chevron-left"></i> leetcode13 Roman to Integer
+              <a href="/ZhouYuxuan97.github.io/2020/07/29/leetcode122/" rel="next" title="leetcode122 Best Time to Buy and Sell Stock II">
+                <i class="fa fa-chevron-left"></i> leetcode122 Best Time to Buy and Sell Stock II
               </a>
             
           </div>
@@ -390,8 +388,8 @@ Output: false</code></pre><h2 id="Solution-by-others"><a href="#Solution-by-othe
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/11/10/leetcode258/" rel="prev" title="leetcode258 Add Digits">
-                leetcode258 Add Digits <i class="fa fa-chevron-right"></i>
+              <a href="/ZhouYuxuan97.github.io/2020/07/30/leetcode124/" rel="prev" title="leetcode124 Binary Tree Maximum Path Sum">
+                leetcode124 Binary Tree Maximum Path Sum <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -540,7 +538,7 @@ Output: false</code></pre><h2 id="Solution-by-others"><a href="#Solution-by-othe
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-others"><span class="nav-number">1.</span> <span class="nav-text">Solution by others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
             
 
           </div>
