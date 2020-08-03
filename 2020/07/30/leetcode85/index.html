@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Array,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area. Example: Input:[  [“1”,”0”,”1”,”0”,”0”],  [“1”,”0”,”1”,”1”,”1”],  [“1”,”1”,”1”,”1”">
-<meta name="keywords" content="Array">
+<meta name="description" content="title: leetcode85 Maximal Rectangledate: 2020-07-30 17:06:05categories:   leetcodetags: Array   Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and re">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode85">
+<meta property="og:title" content="Yuxuan Zhou&#39;s Blog">
 <meta property="og:url" content="https://zhouyuxuan97.github.io/2020/07/30/leetcode85/index.html">
 <meta property="og:site_name" content="Yuxuan Zhou&#39;s Blog">
-<meta property="og:description" content="Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area. Example: Input:[  [“1”,”0”,”1”,”0”,”0”],  [“1”,”0”,”1”,”1”,”1”],  [“1”,”1”,”1”,”1”">
+<meta property="og:description" content="title: leetcode85 Maximal Rectangledate: 2020-07-30 17:06:05categories:   leetcodetags: Array   Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and re">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-07-30T21:06:51.152Z">
+<meta property="og:updated_time" content="2020-07-30T22:16:34.469Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode85">
-<meta name="twitter:description" content="Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area. Example: Input:[  [“1”,”0”,”1”,”0”,”0”],  [“1”,”0”,”1”,”1”,”1”],  [“1”,”1”,”1”,”1”">
+<meta name="twitter:title" content="Yuxuan Zhou&#39;s Blog">
+<meta name="twitter:description" content="title: leetcode85 Maximal Rectangledate: 2020-07-30 17:06:05categories:   leetcodetags: Array   Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and re">
 
 
 
@@ -126,7 +125,7 @@
 
 
 
-  <title>leetcode85 | Yuxuan Zhou's Blog</title>
+  <title> | Yuxuan Zhou's Blog</title>
   
 
 
@@ -270,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode85</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -293,28 +292,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/ZhouYuxuan97.github.io/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -343,7 +320,14 @@
       
 
       
-        <p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area.</p>
+        <hr>
+<p>title: leetcode85 Maximal Rectangle<br>date: 2020-07-30 17:06:05<br>categories: </p>
+<ul>
+<li>leetcode<br>tags:</li>
+<li>Array</li>
+</ul>
+<hr>
+<p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area.</p>
 <p>Example:</p>
 <p>Input:<br>[<br>  [“1”,”0”,”1”,”0”,”0”],<br>  [“1”,”0”,”1”,”1”,”1”],<br>  [“1”,”1”,”1”,”1”,”1”],<br>  [“1”,”0”,”0”,”1”,”0”]<br>]<br>Output: 6</p>
 <h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maximalRectangle</span><span class="params">(<span class="keyword">char</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(matrix.length == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;        </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> hor[][] = <span class="keyword">new</span> <span class="keyword">int</span>[matrix.length + <span class="number">1</span>][matrix[<span class="number">0</span>].length + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> ver[][] = <span class="keyword">new</span> <span class="keyword">int</span>[matrix.length + <span class="number">1</span>][matrix[<span class="number">0</span>].length + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> max_single_line = <span class="number">0</span>;</span><br><span class="line">               </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; matrix.length+<span class="number">1</span>; i++)&#123;</span><br><span class="line">           <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; matrix[<span class="number">0</span>].length+<span class="number">1</span>; j++)&#123;</span><br><span class="line">               <span class="keyword">if</span>(matrix[i-<span class="number">1</span>][j-<span class="number">1</span>] != <span class="string">'0'</span>)&#123; </span><br><span class="line">                   <span class="keyword">if</span>(hor[i][j-<span class="number">1</span>] != <span class="number">0</span>)&#123;</span><br><span class="line">                        hor[i][j] = hor[i][j-<span class="number">1</span>] - <span class="number">1</span>;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> k = j; k &lt; matrix[<span class="number">0</span>].length+<span class="number">1</span>; k++)&#123;</span><br><span class="line">                            <span class="keyword">if</span>(matrix[i-<span class="number">1</span>][k-<span class="number">1</span>] == <span class="string">'1'</span>)&#123;</span><br><span class="line">                                hor[i][j]++;</span><br><span class="line">                            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                   <span class="keyword">if</span>(ver[i-<span class="number">1</span>][j] != <span class="number">0</span>)&#123;</span><br><span class="line">                        ver[i][j] = ver[i-<span class="number">1</span>][j] - <span class="number">1</span>;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> k = i; k &lt; matrix.length+<span class="number">1</span>; k++)&#123;</span><br><span class="line">                            <span class="keyword">if</span>(matrix[k-<span class="number">1</span>][j-<span class="number">1</span>] == <span class="string">'1'</span>)&#123;</span><br><span class="line">                                ver[i][j]++;</span><br><span class="line">                            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                                <span class="keyword">break</span>;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                   max_single_line = Math.max(Math.max(ver[i][j], hor[i][j]),max_single_line);</span><br><span class="line">               &#125;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; matrix.length+<span class="number">1</span>; i++)&#123;</span><br><span class="line">           <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; matrix[<span class="number">0</span>].length+<span class="number">1</span>; j++)&#123;</span><br><span class="line">                <span class="keyword">int</span> length = hor[i][j];</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> a = <span class="number">1</span>; a &lt; ver[i][j]; a++)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(hor[i+a][j] &lt; length)&#123;</span><br><span class="line">                        length = hor[i+a][j];</span><br><span class="line">                    &#125;</span><br><span class="line">                    res= Math.max(res, (a+<span class="number">1</span>) * length);          </span><br><span class="line">                 &#125;</span><br><span class="line">            &#125; </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> Math.max(res,max_single_line);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -362,12 +346,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/ZhouYuxuan97.github.io/tags/Array/" rel="tag"># Array</a>
-          
-        </div>
       
 
       
@@ -467,7 +445,7 @@
               
                 <a href="/ZhouYuxuan97.github.io/archives/">
               
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -489,7 +467,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/ZhouYuxuan97.github.io/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

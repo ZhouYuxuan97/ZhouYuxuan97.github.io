@@ -87,7 +87,7 @@
 <meta property="og:description" content="Length For String, ie String a, a.length() For Array, ie int[] n , n.length  HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space1234567891011121314151617181920212223242526272829303132333435">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://zhouyuxuan97.github.io/2019/09/07/JavaNote/image2.png">
-<meta property="og:updated_time" content="2020-07-30T03:33:57.522Z">
+<meta property="og:updated_time" content="2020-08-03T18:59:16.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaNote">
 <meta name="twitter:description" content="Length For String, ie String a, a.length() For Array, ie int[] n , n.length  HashMap HashSet 用哈希往往耗时更长 Set就明显小于HashMap in runtime and space1234567891011121314151617181920212223242526272829303132333435">
@@ -362,10 +362,12 @@
 
 <h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><ul>
 <li>取String里第n+1个字符, s.charAt(n)</li>
+<li>delete punctuation<br>  s = s.replaceAll(“[^a-zA-Z0-9\u4e00-\u9fa5]”, “”);</li>
+<li>s.toLowerCase(), s.toUpperCase();</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> data[] = &#123;<span class="string">'s'</span>, <span class="string">'g'</span>, <span class="string">'k'</span>&#125;; </span><br><span class="line">String str = <span class="keyword">new</span> String(data);</span><br><span class="line">String n = String.valueOf(data);</span><br></pre></td></tr></table></figure>
 
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>[] n = &#123;<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>&#125;;</span><br><span class="line"><span class="keyword">char</span>[] n = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>&#125;;</span><br><span class="line">Arrays.sort(n);</span><br></pre></td></tr></table></figure>
+<h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>[] n = &#123;<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>&#125;;</span><br><span class="line"><span class="keyword">char</span>[] n = <span class="keyword">new</span> <span class="keyword">char</span>[]&#123;<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>&#125;;</span><br><span class="line">Arrays.sort(n);</span><br></pre></td></tr></table></figure>
 
 <h2 id="ListNode"><a href="#ListNode" class="headerlink" title="ListNode"></a>ListNode</h2><ul>
 <li>如果有设置head则从head开始操作，如果没有则l1.next指向链表第二个节点<br><img src="image2.png" alt="image2"></li>
@@ -380,8 +382,7 @@
 
 </li>
 </ul>
-<p>##位运算符</p>
-<ul>
+<h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><ul>
 <li>Java提供的位运算符有：左移( &lt;&lt; )、右移( &gt;&gt; ) 、无符号右移( &gt;&gt;&gt; ) 、位与( &amp; ) 、位或( | )、位非( ~ )、位异或( ^ )，除了位非( ~ )是一元操作符外，其它的都是二元操作符。</li>
 </ul>
 <p>1、左移( &lt;&lt; )</p>
@@ -392,10 +393,15 @@
 <p>0000 0000 0000 0000 0000 0000 0000 0101           然后左移2位后，低位补0：</p>
 <p>0000 0000 0000 0000 0000 0000 0001 0100           换算成10进制为20</p>
 <p>Example:leetcode231<br>ref:<a href="https://blog.csdn.net/xiaochunyong/article/details/7748713" target="_blank" rel="noopener">https://blog.csdn.net/xiaochunyong/article/details/7748713</a></p>
-<h2 id="ASCII-gt-char"><a href="#ASCII-gt-char" class="headerlink" title="ASCII-&gt;char"></a>ASCII-&gt;char</h2><ul>
+<h2 id="ASCII-int-gt-char"><a href="#ASCII-int-gt-char" class="headerlink" title="ASCII(int)-&gt;char"></a>ASCII(int)-&gt;char</h2><ul>
 <li>(char)n<br> n=65, 65 in ASCII table is “A”<br> char c=(char)n;  // char=A</li>
 </ul>
+<h2 id="char-gt-int"><a href="#char-gt-int" class="headerlink" title="char-&gt; int"></a>char-&gt; int</h2><ul>
+<li>(int)c<br> c=A, 65 in ASCII table is “A”<br> int n=(int)c;  // n = 65</li>
+</ul>
 <h2 id="Apply-ASCII-as-index-of-Array"><a href="#Apply-ASCII-as-index-of-Array" class="headerlink" title="Apply ASCII as index of Array"></a>Apply ASCII as index of Array</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String t = <span class="string">"aab"</span>;</span><br><span class="line"><span class="keyword">int</span> tcount[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">256</span>];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; t.length(); i++)&#123;</span><br><span class="line">     tcount[t.charAt(i)]++;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//tcount[97] = 2, tcount[98] = 1</span></span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
@@ -508,7 +514,7 @@
               
                 <a href="/ZhouYuxuan97.github.io/archives/">
               
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -530,7 +536,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/ZhouYuxuan97.github.io/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -579,7 +585,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Length"><span class="nav-number">1.</span> <span class="nav-text">Length</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap-HashSet"><span class="nav-number">2.</span> <span class="nav-text">HashMap HashSet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-number">3.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">4.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">5.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ListNode"><span class="nav-number">6.</span> <span class="nav-text">ListNode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-number">7.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#foreach"><span class="nav-number">8.</span> <span class="nav-text">foreach</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ASCII-gt-char"><span class="nav-number">9.</span> <span class="nav-text">ASCII-&gt;char</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apply-ASCII-as-index-of-Array"><span class="nav-number">10.</span> <span class="nav-text">Apply ASCII as index of Array</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Length"><span class="nav-number">1.</span> <span class="nav-text">Length</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap-HashSet"><span class="nav-number">2.</span> <span class="nav-text">HashMap HashSet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-number">3.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String"><span class="nav-number">4.</span> <span class="nav-text">String</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array"><span class="nav-number">5.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ListNode"><span class="nav-number">6.</span> <span class="nav-text">ListNode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-number">7.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#foreach"><span class="nav-number">8.</span> <span class="nav-text">foreach</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位运算符"><span class="nav-number">9.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ASCII-int-gt-char"><span class="nav-number">10.</span> <span class="nav-text">ASCII(int)-&gt;char</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#char-gt-int"><span class="nav-number">11.</span> <span class="nav-text">char-&gt; int</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apply-ASCII-as-index-of-Array"><span class="nav-number">12.</span> <span class="nav-text">Apply ASCII as index of Array</span></a></li></ol></div>
             
 
           </div>
