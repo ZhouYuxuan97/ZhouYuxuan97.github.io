@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="List,">
 
 
 
@@ -79,19 +79,18 @@
 
 
 
-<meta name="description" content="Sort a linked list in O(n log n) time using constant space complexity. Example 1: Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4Example 2: Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;g">
+<meta name="description" content="Given two words (beginWord and endWord), and a dictionary’s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: Only one letter can be changed at a tim">
+<meta name="keywords" content="List">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode148 Sort List">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode148/index.html">
+<meta property="og:title" content="leetcode127">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2020/08/04/leetcode127/index.html">
 <meta property="og:site_name" content="Yuxuan Zhou&#39;s Blog">
-<meta property="og:description" content="Sort a linked list in O(n log n) time using constant space complexity. Example 1: Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4Example 2: Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;g">
+<meta property="og:description" content="Given two words (beginWord and endWord), and a dictionary’s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: Only one letter can be changed at a tim">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode148/1.png">
-<meta property="og:updated_time" content="2020-07-30T03:32:54.899Z">
+<meta property="og:updated_time" content="2020-08-04T18:33:44.787Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode148 Sort List">
-<meta name="twitter:description" content="Sort a linked list in O(n log n) time using constant space complexity. Example 1: Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4Example 2: Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;g">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode148/1.png">
+<meta name="twitter:title" content="leetcode127">
+<meta name="twitter:description" content="Given two words (beginWord and endWord), and a dictionary’s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: Only one letter can be changed at a tim">
 
 
 
@@ -121,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/10/23/leetcode148/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2020/08/04/leetcode127/">
 
 
 
 
 
-  <title>leetcode148 Sort List | Yuxuan Zhou's Blog</title>
+  <title>leetcode127 | Yuxuan Zhou's Blog</title>
   
 
 
@@ -254,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/10/23/leetcode148/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2020/08/04/leetcode127/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -271,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode148 Sort List</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode127</h1>
         
 
         <div class="post-meta">
@@ -283,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-23T00:04:12-04:00">
-                2019-10-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-04T14:32:35-04:00">
+                2020-08-04
               </time>
             
 
@@ -344,14 +343,17 @@
       
 
       
-        <p>Sort a linked list in O(n log n) time using constant space complexity.</p>
-<p>Example 1:</p>
-<pre><code>Input: 4-&gt;2-&gt;1-&gt;3
-Output: 1-&gt;2-&gt;3-&gt;4</code></pre><p>Example 2:</p>
-<pre><code>Input: -1-&gt;5-&gt;3-&gt;4-&gt;0
-Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1-QuickSort"><a href="#Approach-1-QuickSort" class="headerlink" title="Approach 1 QuickSort"></a>Approach 1 QuickSort</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">sortList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head!=<span class="keyword">null</span>)&#123;</span><br><span class="line">        ListNode n=head;</span><br><span class="line">        <span class="keyword">while</span>(n.next!=<span class="keyword">null</span>)</span><br><span class="line">            n=n.next;</span><br><span class="line">        quicksort(head,n);&#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(ListNode head,ListNode tail)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span>||head==tail) <span class="keyword">return</span>;</span><br><span class="line">        ListNode n2=head;</span><br><span class="line">        ListNode n3=head.next;</span><br><span class="line">        <span class="keyword">while</span>(n3!=tail.next)&#123;</span><br><span class="line">            <span class="keyword">if</span>(n3.val&lt;head.val)&#123;</span><br><span class="line">                n2=n2.next;</span><br><span class="line">                swap(n2,n3);</span><br><span class="line">            &#125;</span><br><span class="line">            n3=n3.next;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(n2,head);</span><br><span class="line">        quicksort(head,n2);</span><br><span class="line">        quicksort(n2.next,tail);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(ListNode p1,ListNode p2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(p1==p2) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span>(p1==<span class="keyword">null</span>||p2==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> temp=p1.val;</span><br><span class="line">        p1.val=p2.val;</span><br><span class="line">        p2.val=temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>Given two words (beginWord and endWord), and a dictionary’s word list, find the length of shortest transformation sequence from beginWord to endWord, such that:</p>
+<p>Only one letter can be changed at a time.<br>Each transformed word must exist in the word list.<br>Note:</p>
+<p>Return 0 if there is no such transformation sequence.<br>All words have the same length.<br>All words contain only lowercase alphabetic characters.<br>You may assume no duplicates in the word list.<br>You may assume beginWord and endWord are non-empty and are not the same.<br>Example 1:</p>
+<p>Input:<br>beginWord = “hit”,<br>endWord = “cog”,<br>wordList = [“hot”,”dot”,”dog”,”lot”,”log”,”cog”]</p>
+<p>Output: 5</p>
+<p>Explanation: As one shortest transformation is “hit” -&gt; “hot” -&gt; “dot” -&gt; “dog” -&gt; “cog”,<br>return its length 5.<br>Example 2:</p>
+<p>Input:<br>beginWord = “hit”<br>endWord = “cog”<br>wordList = [“hot”,”dot”,”dog”,”lot”,”log”]</p>
+<p>Output: 0</p>
+<p>Explanation: The endWord “cog” is not in wordList, therefore no possible transformation.</p>
+<h2 id="Solution-by-others-BFS"><a href="#Solution-by-others-BFS" class="headerlink" title="Solution by others : BFS"></a>Solution by others : BFS</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    Set&lt;String&gt;visited=<span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">ladderLength</span><span class="params">(String beginWord, String endWord, List&lt;String&gt; wordList)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!wordList.contains(endWord))<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">         </span><br><span class="line">        Queue&lt;String&gt; q =<span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        q.offer(beginWord);</span><br><span class="line">        visited.add(beginWord);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> level = <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(!q.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">int</span> size = q.size();</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++)&#123;</span><br><span class="line">                String current=q.poll();</span><br><span class="line">                <span class="keyword">if</span>(current.equals(endWord)) <span class="keyword">return</span> level;</span><br><span class="line">                </span><br><span class="line">                List&lt;String&gt;adjacent=Adjacent(current,wordList);</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(adjacent!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                    <span class="keyword">for</span>(String s:adjacent)</span><br><span class="line">                        q.offer(s);</span><br><span class="line">                &#125;               </span><br><span class="line">            &#125;</span><br><span class="line">           level++;</span><br><span class="line">        &#125; <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">         <span class="comment">//Adjacent words </span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> List&lt;String&gt; <span class="title">Adjacent</span><span class="params">(String current,List&lt;String&gt; wordList)</span></span>&#123;</span><br><span class="line">        List&lt;String&gt;adjacents=<span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(String s:wordList)&#123;</span><br><span class="line">            <span class="keyword">if</span>(visited.contains(s))<span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">int</span> compare=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(compare&gt;<span class="number">1</span>)<span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">if</span>(current.charAt(i)!=s.charAt(i))</span><br><span class="line">                    compare++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(compare==<span class="number">1</span>)&#123;</span><br><span class="line">                adjacents.add(s);</span><br><span class="line">                visited.add(s);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> adjacents;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="1.png" alt="image"></p>
 
       
     </div>
@@ -367,6 +369,12 @@ Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</code></pre><h2 id="Solution-by-myself"><a hr
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/ZhouYuxuan97.github.io/tags/List/" rel="tag"># List</a>
+          
+        </div>
+      
 
       
       
@@ -376,8 +384,8 @@ Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</code></pre><h2 id="Solution-by-myself"><a hr
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/10/21/leetcode143/" rel="next" title="leetcode143 Reorder List">
-                <i class="fa fa-chevron-left"></i> leetcode143 Reorder List
+              <a href="/ZhouYuxuan97.github.io/2020/08/03/leetcode125/" rel="next" title="leetcode125 Valid Palindrome">
+                <i class="fa fa-chevron-left"></i> leetcode125 Valid Palindrome
               </a>
             
           </div>
@@ -385,10 +393,6 @@ Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</code></pre><h2 id="Solution-by-myself"><a hr
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/10/23/leetcode147/" rel="prev" title="leetcode147 Insertion Sort List">
-                leetcode147 Insertion Sort List <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -536,7 +540,7 @@ Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</code></pre><h2 id="Solution-by-myself"><a hr
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-QuickSort"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1 QuickSort</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-others-BFS"><span class="nav-number">1.</span> <span class="nav-text">Solution by others : BFS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
             
 
           </div>
