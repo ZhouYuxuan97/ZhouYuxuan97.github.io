@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Array,List,DP,">
 
 
 
@@ -79,19 +79,18 @@
 
 
 
-<meta name="description" content="Sort a linked list in O(n log n) time using constant space complexity. Example 1: Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4Example 2: Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;g">
+<meta name="description" content="Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. Note: The sa">
+<meta name="keywords" content="Array,List,DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode148 Sort List">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode148/index.html">
+<meta property="og:title" content="leetcode139 Word Break">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2020/08/14/leetcode139/index.html">
 <meta property="og:site_name" content="Yuxuan Zhou&#39;s Blog">
-<meta property="og:description" content="Sort a linked list in O(n log n) time using constant space complexity. Example 1: Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4Example 2: Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;g">
+<meta property="og:description" content="Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. Note: The sa">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode148/1.png">
-<meta property="og:updated_time" content="2020-07-30T03:32:54.899Z">
+<meta property="og:updated_time" content="2020-08-14T20:59:58.924Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode148 Sort List">
-<meta name="twitter:description" content="Sort a linked list in O(n log n) time using constant space complexity. Example 1: Input: 4-&amp;gt;2-&amp;gt;1-&amp;gt;3 Output: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4Example 2: Input: -1-&amp;gt;5-&amp;gt;3-&amp;gt;4-&amp;gt;0 Output: -1-&amp;gt;0-&amp;g">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/23/leetcode148/1.png">
+<meta name="twitter:title" content="leetcode139 Word Break">
+<meta name="twitter:description" content="Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words. Note: The sa">
 
 
 
@@ -121,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/10/23/leetcode148/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2020/08/14/leetcode139/">
 
 
 
 
 
-  <title>leetcode148 Sort List | Yuxuan Zhou's Blog</title>
+  <title>leetcode139 Word Break | Yuxuan Zhou's Blog</title>
   
 
 
@@ -254,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/10/23/leetcode148/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2020/08/14/leetcode139/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -271,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode148 Sort List</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode139 Word Break</h1>
         
 
         <div class="post-meta">
@@ -283,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-23T00:04:12-04:00">
-                2019-10-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-14T16:57:25-04:00">
+                2020-08-14
               </time>
             
 
@@ -344,15 +343,21 @@
       
 
       
-        <p>Sort a linked list in O(n log n) time using constant space complexity.</p>
-<p>Example 1:</p>
-<pre><code>Input: 4-&gt;2-&gt;1-&gt;3
-Output: 1-&gt;2-&gt;3-&gt;4</code></pre><p>Example 2:</p>
-<pre><code>Input: -1-&gt;5-&gt;3-&gt;4-&gt;0
-Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</code></pre><h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1-QuickSort"><a href="#Approach-1-QuickSort" class="headerlink" title="Approach 1 QuickSort"></a>Approach 1 QuickSort</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">sortList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head!=<span class="keyword">null</span>)&#123;</span><br><span class="line">        ListNode n=head;</span><br><span class="line">        <span class="keyword">while</span>(n.next!=<span class="keyword">null</span>)</span><br><span class="line">            n=n.next;</span><br><span class="line">        quicksort(head,n);&#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(ListNode head,ListNode tail)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="keyword">null</span>||head==tail) <span class="keyword">return</span>;</span><br><span class="line">        ListNode n2=head;</span><br><span class="line">        ListNode n3=head.next;</span><br><span class="line">        <span class="keyword">while</span>(n3!=tail.next)&#123;</span><br><span class="line">            <span class="keyword">if</span>(n3.val&lt;head.val)&#123;</span><br><span class="line">                n2=n2.next;</span><br><span class="line">                swap(n2,n3);</span><br><span class="line">            &#125;</span><br><span class="line">            n3=n3.next;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(n2,head);</span><br><span class="line">        quicksort(head,n2);</span><br><span class="line">        quicksort(n2.next,tail);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(ListNode p1,ListNode p2)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(p1==p2) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span>(p1==<span class="keyword">null</span>||p2==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">int</span> temp=p1.val;</span><br><span class="line">        p1.val=p2.val;</span><br><span class="line">        p2.val=temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>Given a non-empty string s and a dictionary wordDict containing a list of non-empty words, determine if s can be segmented into a space-separated sequence of one or more dictionary words.</p>
+<p>Note:</p>
+<pre><code>The same word in the dictionary may be reused multiple times in the segmentation.
+You may assume the dictionary does not contain duplicate words.</code></pre><p>Example 1:</p>
+<pre><code>Input: s = &quot;leetcode&quot;, wordDict = [&quot;leet&quot;, &quot;code&quot;]
+Output: true
+Explanation: Return true because &quot;leetcode&quot; can be segmented as &quot;leet code&quot;.</code></pre><p>Example 2:</p>
+<pre><code>Input: s = &quot;applepenapple&quot;, wordDict = [&quot;apple&quot;, &quot;pen&quot;]
+Output: true
+Explanation: Return true because &quot;applepenapple&quot; can be segmented as &quot;apple pen apple&quot;.
+         Note that you are allowed to reuse a dictionary word.</code></pre><p>Example 3:</p>
+<pre><code>Input: s = &quot;catsandog&quot;, wordDict = [&quot;cats&quot;, &quot;dog&quot;, &quot;sand&quot;, &quot;and&quot;, &quot;cat&quot;]
+Output: false</code></pre><h2 id="Solution-by-others-DP"><a href="#Solution-by-others-DP" class="headerlink" title="Solution by others: DP"></a>Solution by others: DP</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">wordBreak</span><span class="params">(String s, List&lt;String&gt; wordDict)</span> </span>&#123;</span><br><span class="line">       </span><br><span class="line">       <span class="keyword">boolean</span>[] arr = <span class="keyword">new</span> <span class="keyword">boolean</span>[s.length() + <span class="number">1</span>];</span><br><span class="line">        </span><br><span class="line">        arr[<span class="number">0</span>] = <span class="keyword">true</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt;= s.length(); j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(arr[i]&amp;&amp;wordDict.contains(s.substring(i,j)))&#123;</span><br><span class="line">                    arr[j] = <span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> arr[s.length()];</span><br><span class="line">    &#125;    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="1.png" alt="image"></p>
-
+<h2 id="Solution-by-myself-Recrusive-Time-Limit-Exceeded"><a href="#Solution-by-myself-Recrusive-Time-Limit-Exceeded" class="headerlink" title="Solution by myself: Recrusive(Time Limit Exceeded)"></a>Solution by myself: Recrusive(Time Limit Exceeded)</h2><h3 id="Approach-1-1"><a href="#Approach-1-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    Set&lt;Integer&gt; wordLen = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">wordBreak</span><span class="params">(String s, List&lt;String&gt; wordDict)</span> </span>&#123;</span><br><span class="line">       </span><br><span class="line">        <span class="keyword">for</span>(String str : wordDict)&#123;</span><br><span class="line">            wordLen.add(str.length());</span><br><span class="line">        &#125;</span><br><span class="line">         <span class="keyword">boolean</span> f = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> helper(s ,wordDict,f);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">helper</span><span class="params">(String s, List&lt;String&gt; wordDict,<span class="keyword">boolean</span> f)</span> </span>&#123;</span><br><span class="line">     <span class="comment">//   System.out.println(s+"000");</span></span><br><span class="line">        System.out.println(s.length());</span><br><span class="line">        <span class="keyword">if</span>(s.length()==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">        <span class="keyword">for</span>(Integer len : wordLen)&#123;</span><br><span class="line">           <span class="keyword">try</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(wordDict.contains(s.substring(<span class="number">0</span>, len)))&#123;</span><br><span class="line">                </span><br><span class="line">                f = (f || helper(s.substring(len) ,wordDict, f));</span><br><span class="line">            &#125;</span><br><span class="line">           &#125; <span class="keyword">catch</span>(Exception e)&#123;</span><br><span class="line">               f = (f||<span class="keyword">false</span>);</span><br><span class="line">           &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> f;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -367,6 +372,16 @@ Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</code></pre><h2 id="Solution-by-myself"><a hr
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/ZhouYuxuan97.github.io/tags/Array/" rel="tag"># Array</a>
+          
+            <a href="/ZhouYuxuan97.github.io/tags/List/" rel="tag"># List</a>
+          
+            <a href="/ZhouYuxuan97.github.io/tags/DP/" rel="tag"># DP</a>
+          
+        </div>
+      
 
       
       
@@ -376,8 +391,8 @@ Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</code></pre><h2 id="Solution-by-myself"><a hr
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/10/21/leetcode143/" rel="next" title="leetcode143 Reorder List">
-                <i class="fa fa-chevron-left"></i> leetcode143 Reorder List
+              <a href="/ZhouYuxuan97.github.io/2020/08/14/leetcode134/" rel="next" title="leetcode134 Gas Station">
+                <i class="fa fa-chevron-left"></i> leetcode134 Gas Station
               </a>
             
           </div>
@@ -386,8 +401,8 @@ Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</code></pre><h2 id="Solution-by-myself"><a hr
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/10/23/leetcode147/" rel="prev" title="leetcode147 Insertion Sort List">
-                leetcode147 Insertion Sort List <i class="fa fa-chevron-right"></i>
+              <a href="/ZhouYuxuan97.github.io/2020/08/15/leetcode140/" rel="prev" title="leetcode140 Word Break II">
+                leetcode140 Word Break II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -536,7 +551,7 @@ Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</code></pre><h2 id="Solution-by-myself"><a hr
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-QuickSort"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1 QuickSort</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-others-DP"><span class="nav-number">1.</span> <span class="nav-text">Solution by others: DP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself-Recrusive-Time-Limit-Exceeded"><span class="nav-number">2.</span> <span class="nav-text">Solution by myself: Recrusive(Time Limit Exceeded)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1-1"><span class="nav-number">2.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
             
 
           </div>
