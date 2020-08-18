@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="slope,">
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="Solution by myselfApproach 1123456class Solution &amp;#123;    public void deleteNode(ListNode node) &amp;#123;        node.val=node.next.val;        node.next=node.next.next;    &amp;#125;&amp;#125;">
+<meta name="description" content="Given n points on a 2D plane, find the maximum number of points that lie on the same straight line. Example 1: Input: [[1,1],[2,2],[3,3]]Output: 3Explanation:^||        o|     o|  o+————-&amp;gt;0  1  2">
+<meta name="keywords" content="slope">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode237 Delete Node in a Linked List">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2019/10/20/leetcode237/index.html">
+<meta property="og:title" content="leetcode149">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2020/08/18/leetcode149/index.html">
 <meta property="og:site_name" content="Yuxuan Zhou&#39;s Blog">
-<meta property="og:description" content="Solution by myselfApproach 1123456class Solution &amp;#123;    public void deleteNode(ListNode node) &amp;#123;        node.val=node.next.val;        node.next=node.next.next;    &amp;#125;&amp;#125;">
+<meta property="og:description" content="Given n points on a 2D plane, find the maximum number of points that lie on the same straight line. Example 1: Input: [[1,1],[2,2],[3,3]]Output: 3Explanation:^||        o|     o|  o+————-&amp;gt;0  1  2">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/20/leetcode237/1.png">
-<meta property="og:image" content="https://zhouyuxuan97.github.io/2019/10/20/leetcode237/2.png">
-<meta property="og:updated_time" content="2020-07-30T03:32:55.118Z">
+<meta property="og:updated_time" content="2020-08-18T06:48:19.516Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode237 Delete Node in a Linked List">
-<meta name="twitter:description" content="Solution by myselfApproach 1123456class Solution &amp;#123;    public void deleteNode(ListNode node) &amp;#123;        node.val=node.next.val;        node.next=node.next.next;    &amp;#125;&amp;#125;">
-<meta name="twitter:image" content="https://zhouyuxuan97.github.io/2019/10/20/leetcode237/1.png">
+<meta name="twitter:title" content="leetcode149">
+<meta name="twitter:description" content="Given n points on a 2D plane, find the maximum number of points that lie on the same straight line. Example 1: Input: [[1,1],[2,2],[3,3]]Output: 3Explanation:^||        o|     o|  o+————-&amp;gt;0  1  2">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2019/10/20/leetcode237/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2020/08/18/leetcode149/">
 
 
 
 
 
-  <title>leetcode237 Delete Node in a Linked List | Yuxuan Zhou's Blog</title>
+  <title>leetcode149 | Yuxuan Zhou's Blog</title>
   
 
 
@@ -255,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2019/10/20/leetcode237/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2020/08/18/leetcode149/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -272,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode237 Delete Node in a Linked List</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode149</h1>
         
 
         <div class="post-meta">
@@ -284,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-20T22:02:19-04:00">
-                2019-10-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-18T02:34:44-04:00">
+                2020-08-18
               </time>
             
 
@@ -345,11 +343,11 @@
       
 
       
-        <p><img src="1.png" alt="image"></p>
-<h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(ListNode node)</span> </span>&#123;</span><br><span class="line">        node.val=node.next.val;</span><br><span class="line">        node.next=node.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="2.png" alt="image2"></p>
-
+        <p>Given n points on a 2D plane, find the maximum number of points that lie on the same straight line.</p>
+<p>Example 1:</p>
+<p>Input: [[1,1],[2,2],[3,3]]<br>Output: 3<br>Explanation:<br>^<br>|<br>|        o<br>|     o<br>|  o<br>+————-&gt;<br>0  1  2  3  4<br>Example 2:</p>
+<p>Input: [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]<br>Output: 4<br>Explanation:<br>^<br>|<br>|  o<br>|     o        o<br>|        o<br>|  o        o<br>+——————-&gt;<br>0  1  2  3  4  5  6<br>NOTE: input types have been changed on April 15, 2019. Please reset to default code definition to get new method signature.</p>
+<h2 id="Solution-by-myself-brute"><a href="#Solution-by-myself-brute" class="headerlink" title="Solution by myself: brute"></a>Solution by myself: brute</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxPoints</span><span class="params">(<span class="keyword">int</span>[][] points)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = points.length;</span><br><span class="line">        <span class="keyword">if</span>(len &lt;= <span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> len;</span><br><span class="line">        &#125;</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len-<span class="number">1</span>; i++)&#123;</span><br><span class="line">            Map&lt;Pair, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">            <span class="keyword">int</span> tempres = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> same = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; len; j++)&#123;</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">double</span> d1 = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">double</span> d2 = <span class="number">0</span>;</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(points[i][<span class="number">1</span>] == points[j][<span class="number">1</span>])&#123;</span><br><span class="line">                    <span class="keyword">if</span>(points[i][<span class="number">0</span>] == points[j][<span class="number">0</span>])&#123;    <span class="comment">// same points, will be added in the end</span></span><br><span class="line">                        same++;</span><br><span class="line">                        <span class="keyword">continue</span>;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;                                        <span class="comment">//Parallel to x axis</span></span><br><span class="line">                        d1 = <span class="number">0</span>;</span><br><span class="line">                        d2 = points[i][<span class="number">1</span>];</span><br><span class="line">                   &#125;                    y</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(points[i][<span class="number">0</span>] == points[j][<span class="number">0</span>])&#123;           <span class="comment">//Parallel to y axis</span></span><br><span class="line">                    d1 = Double.POSITIVE_INFINITY;</span><br><span class="line">                    d2 = points[i][<span class="number">0</span>];</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;                                                         <span class="comment">//Normal situation</span></span><br><span class="line">                    d1 = <span class="number">1000000</span> * (<span class="keyword">double</span>)(points[i][<span class="number">1</span>] - points[j][<span class="number">1</span>])/(points[i][<span class="number">0</span>] - points[j][<span class="number">0</span>]);      <span class="comment">//test case 36 or 37, times 1000000 to avoidloss of precision of double variables          </span></span><br><span class="line">                    d2  =  (<span class="keyword">double</span>)(points[i][<span class="number">1</span>] - d1*points[i][<span class="number">0</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">                                                    </span><br><span class="line">                Pair&lt;Double, Double&gt; pair = <span class="keyword">new</span> Pair&lt;&gt;(d1,d2);</span><br><span class="line">                <span class="keyword">if</span>(map.containsKey(pair))&#123;             <span class="comment">//line exists, add 1 point</span></span><br><span class="line">                    <span class="keyword">int</span> num = map.get(pair) + <span class="number">1</span>;</span><br><span class="line">                    map.put(pair, num);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;                                  <span class="comment">//new line, add 2 points</span></span><br><span class="line">                    map.put(pair, <span class="number">2</span>);                    </span><br><span class="line">                &#125;</span><br><span class="line">                tempres = Math.max(tempres, map.get(pair));            </span><br><span class="line">            &#125; </span><br><span class="line">            res = Math.max(res, tempres+same);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -364,6 +362,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/ZhouYuxuan97.github.io/tags/slope/" rel="tag"># slope</a>
+          
+        </div>
+      
 
       
       
@@ -373,8 +377,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2019/10/20/leetcode203/" rel="next" title="leetcode203 Remove Linked List Elements">
-                <i class="fa fa-chevron-left"></i> leetcode203 Remove Linked List Elements
+              <a href="/ZhouYuxuan97.github.io/2020/08/15/leetcode140/" rel="next" title="leetcode140 Word Break II">
+                <i class="fa fa-chevron-left"></i> leetcode140 Word Break II
               </a>
             
           </div>
@@ -382,10 +386,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2019/10/20/leetcode86/" rel="prev" title="leetcode86 Partition List">
-                leetcode86 Partition List <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -533,7 +533,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself-brute"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself: brute</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
             
 
           </div>
