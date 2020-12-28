@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Given an array where elements are sorted in ascending order, convert it to a height balanced BST. For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the">
+<meta name="description" content="如何快速搭建个人学术页面Jekyll Academic + Github Pages本文受到个人网站搭建的启发 首先你需要有：  本地git GitHub账号  使用本方法可以避免本地hexo、hugo安装过程中遇到的各种问题(有些甚至找不到缘由或者没有人给出解决方案),此方法不限于创建学术界面，创建博客等一样适用。基本思路：  使用GitHub的fork功能直接“复制”你喜欢的GitHub模板到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode108 Convert Sorted Array to Binary Search Tree">
-<meta property="og:url" content="https://zhouyuxuan97.github.io/2020/07/20/leetcode108/index.html">
+<meta property="og:title" content="build_personal_academic_page">
+<meta property="og:url" content="https://zhouyuxuan97.github.io/2020/12/28/build-personal-academic-page/index.html">
 <meta property="og:site_name" content="Yuxuan Zhou(周宇轩)">
-<meta property="og:description" content="Given an array where elements are sorted in ascending order, convert it to a height balanced BST. For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the">
+<meta property="og:description" content="如何快速搭建个人学术页面Jekyll Academic + Github Pages本文受到个人网站搭建的启发 首先你需要有：  本地git GitHub账号  使用本方法可以避免本地hexo、hugo安装过程中遇到的各种问题(有些甚至找不到缘由或者没有人给出解决方案),此方法不限于创建学术界面，创建博客等一样适用。基本思路：  使用GitHub的fork功能直接“复制”你喜欢的GitHub模板到">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-07-30T03:32:54.684Z">
+<meta property="og:updated_time" content="2020-12-28T21:41:09.848Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode108 Convert Sorted Array to Binary Search Tree">
-<meta name="twitter:description" content="Given an array where elements are sorted in ascending order, convert it to a height balanced BST. For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the">
+<meta name="twitter:title" content="build_personal_academic_page">
+<meta name="twitter:description" content="如何快速搭建个人学术页面Jekyll Academic + Github Pages本文受到个人网站搭建的启发 首先你需要有：  本地git GitHub账号  使用本方法可以避免本地hexo、hugo安装过程中遇到的各种问题(有些甚至找不到缘由或者没有人给出解决方案),此方法不限于创建学术界面，创建博客等一样适用。基本思路：  使用GitHub的fork功能直接“复制”你喜欢的GitHub模板到">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://zhouyuxuan97.github.io/2020/07/20/leetcode108/">
+  <link rel="canonical" href="https://zhouyuxuan97.github.io/2020/12/28/build-personal-academic-page/">
 
 
 
 
 
-  <title>leetcode108 Convert Sorted Array to Binary Search Tree | Yuxuan Zhou(周宇轩)</title>
+  <title>build_personal_academic_page | Yuxuan Zhou(周宇轩)</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2020/07/20/leetcode108/">
+    <link itemprop="mainEntityOfPage" href="https://zhouyuxuan97.github.io/ZhouYuxuan97.github.io/2020/12/28/build-personal-academic-page/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yuxuan Zhou">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode108 Convert Sorted Array to Binary Search Tree</h1>
+          <h1 class="post-title" itemprop="name headline">build_personal_academic_page</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-07-20T00:04:51-04:00">
-                2020-07-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-28T16:34:40-05:00">
+                2020-12-28
               </time>
             
 
@@ -305,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/ZhouYuxuan97.github.io/categories/leetcode/" itemprop="url" rel="index">
-                    <span itemprop="name">leetcode</span>
+                  <a href="/ZhouYuxuan97.github.io/categories/Experience/" itemprop="url" rel="index">
+                    <span itemprop="name">Experience</span>
                   </a>
                 </span>
 
@@ -342,14 +342,60 @@
       
 
       
-        <p>Given an array where elements are sorted in ascending order, convert it to a height balanced BST.</p>
-<p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.</p>
-<p>Example:</p>
-<p>Given the sorted array: [-10,-3,0,5,9],</p>
-<p>One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:</p>
-<pre><code> 0
-/ \</code></pre><p>   -3   9<br>   /   /<br> -10  5</p>
-<h2 id="Solution-by-myself"><a href="#Solution-by-myself" class="headerlink" title="Solution by myself"></a>Solution by myself</h2><h3 id="Approach-1"><a href="#Approach-1" class="headerlink" title="Approach 1"></a>Approach 1</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">sortedArrayToBST</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> build(nums,<span class="number">0</span>, nums.length -<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">build</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> index = (<span class="keyword">int</span>)Math.ceil((end+start)/<span class="number">2</span>);</span><br><span class="line">        TreeNode root = <span class="keyword">new</span> TreeNode(nums[index]);</span><br><span class="line">        <span class="keyword">int</span> left = index - start;</span><br><span class="line">        <span class="keyword">int</span> right = end - index;</span><br><span class="line">        </span><br><span class="line">        root.left = left == <span class="number">0</span>? <span class="keyword">null</span> : build(nums,start, index - <span class="number">1</span>);</span><br><span class="line">        root.right = right == <span class="number">0</span>? <span class="keyword">null</span> : build(nums, index + <span class="number">1</span>, end);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="如何快速搭建个人学术页面Jekyll-Academic-Github-Pages"><a href="#如何快速搭建个人学术页面Jekyll-Academic-Github-Pages" class="headerlink" title="如何快速搭建个人学术页面Jekyll Academic + Github Pages"></a>如何快速搭建个人学术页面Jekyll Academic + Github Pages</h1><p><strong>本文受到<a href="https://lijian.ac.cn/posts/2018/11/homepage/" target="_blank" rel="noopener">个人网站搭建</a>的启发</strong></p>
+<p>首先你需要有：</p>
+<ul>
+<li>本地git</li>
+<li>GitHub账号</li>
+</ul>
+<p>使用本方法可以避免本地hexo、hugo安装过程中遇到的各种问题(有些甚至找不到缘由或者没有人给出解决方案),此方法不限于创建学术界面，创建博客等一样适用。基本思路：</p>
+<ol>
+<li>使用GitHub的fork功能直接“复制”你喜欢的GitHub模板到本地</li>
+<li>用<code>Git Bash Here</code>在本地创建git仓库</li>
+<li>修改配置文件(一般是源目录下的yml文件,可以参考该模板的官方说明)</li>
+<li>写博客(可选)</li>
+<li>用<code>Git Bash Here</code>提交刚才的修改</li>
+</ol>
+<h2 id="具体方法"><a href="#具体方法" class="headerlink" title="具体方法"></a>具体方法</h2><h3 id="普通流程"><a href="#普通流程" class="headerlink" title="普通流程"></a>普通流程</h3><ol>
+<li>Fork该<a href="https://academicpages.github.io/" target="_blank" rel="noopener">仓库</a>.</li>
+<li>回到自己的GitHub页面，在该仓库Setting中修改仓库名称为[your_name].github.io，该名称将会成为你个人主页的网址。修改完成后直接访问[your_name].github.io就可以看到页面搭建完成(有时需要等两分钟配置完成)。</li>
+</ol>
+<h3 id="关键分支：在GitHub上直接修改"><a href="#关键分支：在GitHub上直接修改" class="headerlink" title="关键分支：在GitHub上直接修改"></a>关键分支：在GitHub上直接修改</h3><p>优点：操作直接，理解容易<br>缺点：增加文件很麻烦，没办法删除文件(致命缺点)</p>
+<ol>
+<li>设置侧边内容、生成content&amp;metadata。<ul>
+<li>Site-wide configuration : 主要的配置信息及侧边信息在<code>_config.yml</code>中，top menu的配置在<code>_data/navigation.yml</code>中，对于不需要的选项可以删除(注释掉)。</li>
+<li>Create contenet &amp; metadata : 网站内容都存储在对应文件夹(如_publications, posts等)下的markdown文件中，这些markdown文件的顶部是yaml格式来定义结构化内容。</li>
+<li>根据该主题的<a href="https://academicpages.github.io/markdown/" target="_blank" rel="noopener">Guide</a>，可以根据关键文件的位置进行内容修改，直接修改md文件即可不必安装Jekyll。很多教程中的第一步就是安装Jekyll，其实没有必要安装该框架，因为Github提供了Jekyll的服务环境，会自动利用Jekell生成站点，用户只需要修改关注md文件即可。</li>
+<li>关键文件位置及路径<br>Basic config options: _config.yml<br>Top navigation bar config: _data/navigation.yml<br>Single pages: _pages/<br>Collections of pages are .md or .html files in:<br>_publications/<br>_portfolio/<br>_posts/<br>_teaching/<br>_talks/<br>Footer: _includes/footer.html<br>Static files (like PDFs): /files/<br>Profile image (can set in _config.yml): images/profile.png</li>
+</ul>
+</li>
+<li>上传文件（pdf, zip等文件）至<code>files/directory</code>下，会出现在<code>https://[your name].github.io</code>下。<br>在设置页面修改完善”GitHub pages”页面</li>
+<li>目前搭建好的个人主页可以直接访问[your_name].github.io，如我的个人主页<a href="zyx97.github.io">zyx97.github.io</a>。但如果想要使用独有的个性域名还需要额外步骤。</li>
+</ol>
+<h3 id="关键分支：在本地修改"><a href="#关键分支：在本地修改" class="headerlink" title="关键分支：在本地修改"></a>关键分支：在本地修改</h3><p><strong>本段受到<a href="https://blog.csdn.net/qq_41401062/article/details/89304072" target="_blank" rel="noopener">如何修改别人的github项目，并上传到他的github</a>的启发</strong><br>优点：增删查改更符合习惯<br>缺点：要用git，上传时输密码很麻烦(待解决)</p>
+<ol>
+<li>在文件夹里打开<code>Git Bash Here</code></li>
+<li>输入<code>git init</code>创建本地仓库（结果是在当前目录会出现.git文件，为隐藏文件夹）</li>
+<li>输入<code>git clone https://github.com/[your_name]/[your_name].github.io</code> 你的github项目地址 （这一步是克隆项目到本地），此时会出现<code>[your_name].github.io</code>的文件夹，点进去发现内容与你的GitHub一致</li>
+<li>同上一个关键分支，直接修改各个配置文件</li>
+<li>(可选)阅读该模板的Guide，用Git或者手动创建新的博客(.md文件)，用自己喜欢的编辑器写博客</li>
+<li>在<code>[your_name].github.io</code>文件夹内打开<code>Git Bash Here</code></li>
+<li>输入 <code>git add .</code>（这一步是将修改的内容进行同步，须注意的是后面的 . 要有空格）在这个输入完后可以在输入<code>git status</code>查看进度</li>
+<li>输入<code>git commit -m &quot;你的修改地方&quot;</code> （这一步可以跳过，主要作用是对修改的地方进行注释，方便整合管理），此时<code>Bash</code>会显示你做了哪些修改(例如删掉了什么文件)</li>
+<li>输入 <code>git push</code><del>即可上传成功</del>，此处需要账号密码登录GitHub(不然岂不是谁都可以修改你的文件并覆盖)，且GitHub给的登录窗口永远登陆失败，然后Git会再给你一个SSH登陆窗口，再次输入账号密码，当看到几个<code>100%</code>和<code>done</code>就表示成功了,此时去GitHub看看自己库有没有相应的修改</li>
+<li>访问<code>[your_name].github.io</code>看看自己的博客</li>
+</ol>
+<h2 id="使用自己的网址"><a href="#使用自己的网址" class="headerlink" title="使用自己的网址"></a>使用自己的网址</h2><ol>
+<li>在自己购买域名的网站(阿里云,name.com等)设置一条DNS解析，类型为<code>CNAME</code>,主机为自己拥有的域名或者子域名，响应为<code>[your_name].github.io</code>，其余默认即可</li>
+<li>在GitHub库的<code>settings</code>中下滑到<code>GitHub Pages</code>，找到<code>Custom domain</code>，填入刚才的主机名并保存</li>
+<li>过几分钟(或更久)访问自己的域名就会自动跳转到博客</li>
+</ol>
+<h2 id="让自己的博客被谷歌、百度的搜索收录"><a href="#让自己的博客被谷歌、百度的搜索收录" class="headerlink" title="让自己的博客被谷歌、百度的搜索收录"></a>让自己的博客被谷歌、百度的搜索收录</h2><p>已处理，目前等待效果</p>
+<h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><ul>
+<li><strong><a href="yuxuanzhou.com">学术(yuxuanzhou.com)</a></strong>，Jekyll Academic + Github Pages,采用本文方法配置</li>
+<li><strong><a href="blog.yuxuanzhou.com">博客(blog.yuxuanzhou.com)</a></strong>，Hexo+NexT.Pisces主题，采用Hexo本地常规配置</li>
+</ul>
+
       
     </div>
     
@@ -373,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/ZhouYuxuan97.github.io/2020/07/17/leetcode105/" rel="next" title="leetcode105 Construct Binary Tree from Preorder and Inorder Traversal">
-                <i class="fa fa-chevron-left"></i> leetcode105 Construct Binary Tree from Preorder and Inorder Traversal
+              <a href="/ZhouYuxuan97.github.io/2020/12/27/test/" rel="next" title="test">
+                <i class="fa fa-chevron-left"></i> test
               </a>
             
           </div>
@@ -382,10 +428,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/ZhouYuxuan97.github.io/2020/07/20/leetcode116/" rel="prev" title="leetcode116 Populating Next Right Pointers in Each Node">
-                leetcode116 Populating Next Right Pointers in Each Node <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -533,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-by-myself"><span class="nav-number">1.</span> <span class="nav-text">Solution by myself</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Approach-1"><span class="nav-number">1.1.</span> <span class="nav-text">Approach 1</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何快速搭建个人学术页面Jekyll-Academic-Github-Pages"><span class="nav-number">1.</span> <span class="nav-text">如何快速搭建个人学术页面Jekyll Academic + Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#具体方法"><span class="nav-number">1.1.</span> <span class="nav-text">具体方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通流程"><span class="nav-number">1.1.1.</span> <span class="nav-text">普通流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键分支：在GitHub上直接修改"><span class="nav-number">1.1.2.</span> <span class="nav-text">关键分支：在GitHub上直接修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键分支：在本地修改"><span class="nav-number">1.1.3.</span> <span class="nav-text">关键分支：在本地修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用自己的网址"><span class="nav-number">1.2.</span> <span class="nav-text">使用自己的网址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#让自己的博客被谷歌、百度的搜索收录"><span class="nav-number">1.3.</span> <span class="nav-text">让自己的博客被谷歌、百度的搜索收录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#成果"><span class="nav-number">1.4.</span> <span class="nav-text">成果</span></a></li></ol></li></ol></div>
             
 
           </div>
